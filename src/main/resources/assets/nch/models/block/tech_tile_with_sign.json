@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/template_glazed_terracotta",
+    "textures": {
+        "pattern": "nch:block/tech_tile_with_sign"
+    }
+}

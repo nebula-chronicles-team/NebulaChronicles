@@ -1,0 +1,34 @@
+modLoader="javafml" #mandatory
+loaderVersion="[47,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="${mod_license}"
+[[mods]] #mandatory
+modId="nch" #mandatory
+version="${mod_version}" #mandatory
+displayName="Nebula Chronicles" #mandatory
+logoFile="nch.png" #optional
+credits="MIT" #optional
+authors="Zoshsgahdnkc" #optional
+description='''
+~~
+-Amidst the infinite void, an extraterrestrial stronghold beckons.
+
+-Will you dare to venture forth and claim the spoils of a bygone era?
+~~
+
+Added a whole set of high-tech style building blocks and
+an optional alien structure.
+
+A mod I made to practice some abilities featured in minecraft modding.
+'''
+[[dependencies.nch]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[47,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.nch]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
