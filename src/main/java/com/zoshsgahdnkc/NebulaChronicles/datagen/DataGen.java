@@ -18,5 +18,7 @@ public class DataGen {
 
         generator.addProvider(true, new ModRecipeProvider(output));
         generator.addProvider(true, ModLootProvider.add(output));
+        generator.addProvider(true, new ModBlockStateProvider(output, helper));
+        generator.addProvider(true, new ModItemModelProvider(output, helper));
     }
 }

@@ -65,6 +65,7 @@ public class NebulaChronicles {
             event.accept(ModItems.MUSIC_DISC_HALFWAY);
             event.accept(ModBlocks.COARSE_CACTUS_PLANKS);
             event.accept(ModBlocks.COARSE_CACTUS_DOOR);
+            event.accept(ModBlocks.COARSE_CACTUS_TRAPDOOR);
             event.accept(ModBlocks.NICKELSTEEL_PLASTIC_CONTAINER);
             event.accept(ModBlocks.CARGO_BOX);
         }

@@ -1,7 +1,0 @@
-{
-    "parent": "minecraft:block/cube_column",
-    "textures": {
-        "end": "nch:block/fortress_wall_light_top",
-        "side": "nch:block/fortress_wall_light"
-    }
-}

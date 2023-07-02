@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_left",
-  "textures": {
-    "bottom": "nch:block/coarse_cactus_door_bottom",
-    "top": "nch:block/coarse_cactus_door_top"
-  },
-  "render_type": "cutout"
-}

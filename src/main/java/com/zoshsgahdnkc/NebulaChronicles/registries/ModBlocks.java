@@ -44,7 +44,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> COARSE_CACTUS_DOOR = registerBlock("coarse_cactus_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(COARSE_CACTUS_PLANKS.get()), BlockSetType.BAMBOO));
     public static final RegistryObject<Block> COARSE_CACTUS_TRAPDOOR = registerBlock("coarse_cactus_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(COARSE_CACTUS_PLANKS.get()), BlockSetType.BAMBOO));
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(COARSE_CACTUS_PLANKS.get()).noOcclusion(), BlockSetType.BAMBOO));
     public static final RegistryObject<Block> DARK_TILE = registerBlock("dark_tile",
             () -> new Block(BlockBehaviour.Properties.copy(FORTRESS_BLOCK.get()).sound(SoundType.COPPER)));
     public static final RegistryObject<Block> ERODED_DARK_TILE = registerBlock("eroded_dark_tile",

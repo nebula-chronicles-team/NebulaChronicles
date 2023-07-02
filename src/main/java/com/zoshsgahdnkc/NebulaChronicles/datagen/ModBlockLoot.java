@@ -30,7 +30,6 @@ public class ModBlockLoot extends BlockLootSubProvider {
         dropSelf(ModBlocks.ERODED_DARK_TILE.get());
         dropSelf(ModBlocks.ERODED_LIGHT_TILE.get());
         dropSelf(ModBlocks.FORTRESS_BLOCK.get());
-        dropSelf(ModBlocks.FORTRESS_DOOR.get());
         dropSelf(ModBlocks.FORTRESS_WALL.get());
         dropSelf(ModBlocks.FORTRESS_WALL_LIGHT.get());
         dropSelf(ModBlocks.FORTRESS_WALL_LIGHT_UNLIT.get());
@@ -52,6 +51,7 @@ public class ModBlockLoot extends BlockLootSubProvider {
         dropSelf(ModBlocks.THICK_VAULT_STAIRS.get());
         dropSelf(ModBlocks.ULTRALLOY_BLOCK.get());
 
+        add(ModBlocks.FORTRESS_DOOR.get(), (this::createDoorTable));
         add(ModBlocks.MOSS_SILVERBLANC_STONE.get(),(block) ->
                 createSingleItemTableWithSilkTouch(block, ModBlocks.SILVERBLANC_STONE.get()));
     }

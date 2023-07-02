@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-02T14:29:44.0138481	Loot Tables
+// 1.20.1	2023-07-03T02:39:16.6081066	Loot Tables
 b47f7d5a81ea8d2ca318632f87863280ba3a0cd2 data/nch/loot_tables/blocks/archeova_stone.json
 c3c366bad90dcbaea3d9305c0a4a3db67bb3e7cc data/nch/loot_tables/blocks/bunker_bricks.json
 f1bd56f878ba8e7181092f6c28fcebb06c8c37cc data/nch/loot_tables/blocks/cargo_box.json
@@ -12,7 +12,7 @@ b8cb887bc4ed818c3bb73ff23cee6d5cbb262bb2 data/nch/loot_tables/blocks/deepspace_s
 a501cb44001464ecc96a7d79944f8618a990b7e5 data/nch/loot_tables/blocks/eroded_dark_tile.json
 70af7a358f2c694175060566d4bfb14453edff29 data/nch/loot_tables/blocks/eroded_light_tile.json
 9d8cf8ef40a55c04c2df70c5d9973408291016b9 data/nch/loot_tables/blocks/fortress_block.json
-fa6b5fdcfd0abe838435d9e57228520df3c10044 data/nch/loot_tables/blocks/fortress_door.json
+db8f8e041c91d15343a1ddb2c4fe83b9fa4701ae data/nch/loot_tables/blocks/fortress_door.json
 03fdc197a56dd79b91e9551847707528232bdcf4 data/nch/loot_tables/blocks/fortress_wall.json
 c07f3ba6b9ac0ebf64c8925cb07cdbb0aa965990 data/nch/loot_tables/blocks/fortress_wall_light.json
 8486183de3c6e9b919b868a4c28d847c5a895be5 data/nch/loot_tables/blocks/fortress_wall_light_unlit.json
