@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "nch:organic_plastic"
+      "item": "nch:nickel_ingot"
     }
   },
   "pattern": [
@@ -12,7 +12,7 @@
     "###"
   ],
   "result": {
-    "item": "nch:organic_plastic_block"
+    "item": "nch:nickel_block"
   },
   "show_notification": true
 }

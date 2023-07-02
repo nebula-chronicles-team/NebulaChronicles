@@ -3,11 +3,11 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "nch:organic_plastic_block"
+      "item": "nch:nickelsteel_plastic"
     }
   ],
   "result": {
     "count": 9,
-    "item": "nch:organic_plastic"
+    "item": "nch:nickelsteel_plastic_nugget"
   }
 }

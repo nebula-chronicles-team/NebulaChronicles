@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "nch:organic_plastic"
+      "item": "nch:ultralloy_ingot"
     }
   },
   "pattern": [
@@ -12,7 +12,7 @@
     "###"
   ],
   "result": {
-    "item": "nch:organic_plastic_block"
+    "item": "nch:ultralloy_block"
   },
   "show_notification": true
 }

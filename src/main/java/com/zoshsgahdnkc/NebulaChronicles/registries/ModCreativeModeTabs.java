@@ -19,12 +19,12 @@ public class ModCreativeModeTabs {
     public static final RegistryObject<CreativeModeTab> TAB_MISC = TABS.register("tab_misc", () -> CreativeModeTab.builder()
             .title(Component.translatable("item_Group."+ MODID +".tab_misc"))
             .icon(() -> new ItemStack(ModBlocks.FORTRESS_BLOCK.get()))
-            .withTabsBefore(CreativeModeTabs.INGREDIENTS)
+            .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
             .build());
 
     public static final RegistryObject<CreativeModeTab> TAB_INDUSTRY = TABS.register("tab_industry", () -> CreativeModeTab.builder()
             .title(Component.translatable("item_Group."+ MODID +".tab_industry"))
             .icon(() -> new ItemStack(ModItems.CPU.get()))
-            .withTabsAfter(TAB_MISC.getId())
+            .withTabsBefore(TAB_MISC.getId())
             .build());
 }

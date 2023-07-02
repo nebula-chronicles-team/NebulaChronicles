@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
+  "category": "misc",
   "key": {
     "#": {
-      "item": "nch:organic_plastic"
+      "item": "nch:ultralloy_nugget"
     }
   },
   "pattern": [
@@ -12,7 +12,7 @@
     "###"
   ],
   "result": {
-    "item": "nch:organic_plastic_block"
+    "item": "nch:ultralloy_ingot"
   },
   "show_notification": true
 }
