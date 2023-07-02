@@ -1,8 +1,7 @@
-package com.zoshsgahdnkc.NebulaChronicles.block;
+package com.zoshsgahdnkc.NebulaChronicles.registries;
 
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
-import com.zoshsgahdnkc.NebulaChronicles.item.ModItems;
-import com.zoshsgahdnkc.NebulaChronicles.sound.ModSounds;
+import com.zoshsgahdnkc.NebulaChronicles.block.*;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -91,7 +90,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> COSMIC_SAND = registerBlock("cosmic_sand",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SAND).strength(1f)));
     public static final RegistryObject<Block> SILVERBLANC_STONE = registerBlock("silverblanc_stone",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> MOSS_SILVERBLANC_STONE = registerBlock("moss_silverblanc_stone",
             () -> new Block(BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get()).sound(SoundType.NYLIUM)));
     public static void register(IEventBus eventBus) {

@@ -1,11 +1,11 @@
 package com.zoshsgahdnkc.NebulaChronicles;
 
 import com.mojang.logging.LogUtils;
-import com.zoshsgahdnkc.NebulaChronicles.block.ModBlocks;
+import com.zoshsgahdnkc.NebulaChronicles.registries.ModBlocks;
 import com.zoshsgahdnkc.NebulaChronicles.block.entity.ModBlockEntities;
-import com.zoshsgahdnkc.NebulaChronicles.item.ModCreativeModeTabs;
-import com.zoshsgahdnkc.NebulaChronicles.item.ModItems;
-import com.zoshsgahdnkc.NebulaChronicles.sound.ModSounds;
+import com.zoshsgahdnkc.NebulaChronicles.registries.ModCreativeModeTabs;
+import com.zoshsgahdnkc.NebulaChronicles.registries.ModItems;
+import com.zoshsgahdnkc.NebulaChronicles.registries.ModSounds;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;

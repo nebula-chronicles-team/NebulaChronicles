@@ -6,7 +6,7 @@ modId="nch" #mandatory
 version="${mod_version}" #mandatory
 displayName="Nebula Chronicles" #mandatory
 logoFile="nch.png" #optional
-credits="MIT" #optional
+credits="" #optional
 authors="Zoshsgahdnkc" #optional
 description='''
 ~~
@@ -16,7 +16,7 @@ description='''
 ~~
 
 Added a whole set of high-tech style building blocks and
-an optional alien structure.
+related items.
 
 A mod I made to practice some abilities featured in minecraft modding.
 '''

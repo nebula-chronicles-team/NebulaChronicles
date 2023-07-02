@@ -1,4 +1,4 @@
-package com.zoshsgahdnkc.NebulaChronicles.sound;
+package com.zoshsgahdnkc.NebulaChronicles.registries;
 
 
 import net.minecraft.resources.ResourceLocation;

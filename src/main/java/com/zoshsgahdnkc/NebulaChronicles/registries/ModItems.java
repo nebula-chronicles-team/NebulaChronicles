@@ -1,6 +1,5 @@
-package com.zoshsgahdnkc.NebulaChronicles.item;
+package com.zoshsgahdnkc.NebulaChronicles.registries;
 
-import com.zoshsgahdnkc.NebulaChronicles.sound.ModSounds;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.RecordItem;

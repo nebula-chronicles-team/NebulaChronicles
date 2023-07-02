@@ -1,6 +1,5 @@
-package com.zoshsgahdnkc.NebulaChronicles.item;
+package com.zoshsgahdnkc.NebulaChronicles.registries;
 
-import com.zoshsgahdnkc.NebulaChronicles.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
