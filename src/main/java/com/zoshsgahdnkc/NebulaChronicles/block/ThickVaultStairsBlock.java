@@ -1,5 +1,6 @@
 package com.zoshsgahdnkc.NebulaChronicles.block;
 
+import com.zoshsgahdnkc.NebulaChronicles.utils.VoxelBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -21,22 +22,14 @@ public class ThickVaultStairsBlock extends Block {
         super(pProperties);
     }
 
-    public static final VoxelShape SHAPE_N = Shapes.or(
-            Block.box(0,0,0,16,3,9),
-            Block.box(0,3,5,16,8,14),
-            Block.box(0,8,10,16,13,16));
-    public static final VoxelShape SHAPE_S = Shapes.or(
-            Block.box(0,0,7,16,3,16),
-            Block.box(0,3,2,16,8,11),
-            Block.box(0,8,0,16,13,6));
-    public static final VoxelShape SHAPE_E = Shapes.or(
-            Block.box(7,0,0,16,3,16),
-            Block.box(2,3,0,11,8,16),
-            Block.box(0,8,0,6,13,16));
-    public static final VoxelShape SHAPE_W = Shapes.or(
-            Block.box(0,0,0,9,3,16),
-            Block.box(5,3,0,14,8,16),
-            Block.box(10,8,0,16,13,16));
+    private static final VoxelBuilder builder = new VoxelBuilder()
+            .add(0,0,0,16,3,9)
+            .add(0,3,5,16,5,9)
+            .add(0,8,10,16,5,6);
+    public static final VoxelShape SHAPE_N = builder.buildNorth();
+    public static final VoxelShape SHAPE_S = builder.buildSouth();
+    public static final VoxelShape SHAPE_E = builder.buildEast();
+    public static final VoxelShape SHAPE_W = builder.buildWest();
 
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {

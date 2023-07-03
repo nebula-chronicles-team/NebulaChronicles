@@ -30,15 +30,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ModBlocks.FORTRESS_WALL_LIGHT,
             ModBlocks.FORTRESS_WALL_LIGHT_UNLIT,
             ModBlocks.IRON_BRICKS_SLAB,
-            ModBlocks.IRON_BRICKS_STAIRS
+            ModBlocks.IRON_BRICKS_STAIRS,
+
+            ModBlocks.TECH_TILE_WITH_SIGN,
+
+            ModBlocks.CARGO_BOX
 
     );
     private static final ImmutableSet<RegistryObject<Block>> CUSTOMS = ImmutableSet.of(
             ModBlocks.THICK_VAULT_STAIRS,
             ModBlocks.SIMPLE_VAULT_STAIRS,
             ModBlocks.LOW_FENCE,
-            ModBlocks.NICKELSTEEL_PLASTIC_CONTAINER,
-            ModBlocks.CARGO_BOX
+            ModBlocks.NICKELSTEEL_PLASTIC_CONTAINER
     );
 
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -50,26 +53,30 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         for (var entry: ModBlocks.BLOCKS.getEntries()) {
             if (CUSTOMS.contains(entry)) {
-                itemModels().withExistingParent(name(entry),
-                        getRL(ModelProvider.BLOCK_FOLDER + "/" + name(entry)));
-                simpleBlock(entry.get(), models().getExistingFile(getRL(ModelProvider.BLOCK_FOLDER + "/" + name(entry))));
+                blockWithItem(entry, e -> horizontalBlock(e.get(), models().getExistingFile(getRL(ModelProvider.BLOCK_FOLDER + "/" + name(e)))));
             }else if (!IGNORES.contains(entry)) {
                 simple(entry);
             }
         }
 
+        blockWithItem(ModBlocks.TECH_TILE_WITH_SIGN, b -> horizontalBlock(b.get(), cubeAll(b.get())));
         multiple(ModBlocks.IRON_COLLAGE, 3);
         multiple(ModBlocks.BUNKER_BRICKS, 3);
-        blockWithItem(ModBlocks.FORTRESS_WALL, (b) -> simpleBlock(b.get(), models().cubeColumn(name(b), getRL("block/fortress_wall"), getRL("block/fortress_wall_top"))));
-        blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT, (b) -> logBlock((RotatedPillarBlock) b.get()));
-        blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT_UNLIT, (b) -> logBlock((RotatedPillarBlock) b.get()));
-        blockWithItem(ModBlocks.IRON_BRICKS_STAIRS, (b) -> stairsBlock((StairBlock) b.get(), getRL("block/iron_bricks")));
+        blockWithItem(ModBlocks.FORTRESS_WALL, b -> simpleBlock(b.get(), models().cubeColumn(name(b), getRL("block/fortress_wall"), getRL("block/fortress_wall_top"))));
+        blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT, b -> logBlock((RotatedPillarBlock) b.get()));
+        blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT_UNLIT, b -> logBlock((RotatedPillarBlock) b.get()));
+        blockWithItem(ModBlocks.IRON_BRICKS_STAIRS, b -> stairsBlock((StairBlock) b.get(), getRL("block/iron_bricks")));
         slab(ModBlocks.IRON_BRICKS_SLAB, getRL("block/iron_bricks_slab"), getRL("block/iron_bricks"));
         doorBlockWithRenderType((DoorBlock) ModBlocks.FORTRESS_DOOR.get(),
                 getRL("block/fortress_door_bottom"),
                 getRL("block/fortress_door_top"),
                 "translucent");
-        blockWithItem(ModBlocks.COARSE_CACTUS_TRAPDOOR, "coarse_cactus_trapdoor_bottom", (b) -> trapdoorBlockWithRenderType((TrapDoorBlock) b.get(), blockTexture(b.get()), true, "cutout"));
+        doorBlockWithRenderType((DoorBlock) ModBlocks.COARSE_CACTUS_DOOR.get(),
+                getRL("block/coarse_cactus_door_bottom"),
+                getRL("block/coarse_cactus_door_top"),
+                "cutout");
+        blockWithItem(ModBlocks.COARSE_CACTUS_TRAPDOOR, "coarse_cactus_trapdoor_bottom", b -> trapdoorBlockWithRenderType((TrapDoorBlock) b.get(), blockTexture(b.get()), true, "cutout"));
+        blockWithItem(ModBlocks.CARGO_BOX, b -> simpleBlock(b.get(), models().getExistingFile(getRL(ModelProvider.BLOCK_FOLDER + "/" + name(b)))));
     }
 
     protected void simple(RegistryObject<Block> block) {

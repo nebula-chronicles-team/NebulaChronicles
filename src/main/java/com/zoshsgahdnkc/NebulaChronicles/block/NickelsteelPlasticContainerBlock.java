@@ -1,6 +1,7 @@
 package com.zoshsgahdnkc.NebulaChronicles.block;
 
 import com.zoshsgahdnkc.NebulaChronicles.block.entity.NickelsteelPlasticContainerBlockEntity;
+import com.zoshsgahdnkc.NebulaChronicles.utils.VoxelBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -36,22 +37,14 @@ public class NickelsteelPlasticContainerBlock extends BaseEntityBlock {
         super(pProperties);
     }
 
-    public static final VoxelShape SHAPE_N = Shapes.or(
-            Block.box(13,0,4,16,11,15),
-            Block.box(0,0,4,3,11,15),
-            Block.box(3,1,5,13,10,14));
-    public static final VoxelShape SHAPE_S = Shapes.or(
-            Block.box(13,0,1,16,11,12),
-            Block.box(0,0,1,3,11,12),
-            Block.box(3,1,2,13,10,11));
-    public static final VoxelShape SHAPE_E = Shapes.or(
-            Block.box(1,0,13,12,11,16),
-            Block.box(1,0,0,12,11,3),
-            Block.box(2,1,3,11,10,13));
-    public static final VoxelShape SHAPE_W = Shapes.or(
-            Block.box(4,0,0,15,11,3),
-            Block.box(4,0,13,15,11,16),
-            Block.box(5,1,3,14,10,13));
+    private static final VoxelBuilder builder = new VoxelBuilder()
+            .add(13,0,4,3,11,11)
+            .add(0,0,4,3,11,11)
+            .add(3,1,5,10,9,9);
+    public static final VoxelShape SHAPE_N = builder.buildNorth();
+    public static final VoxelShape SHAPE_S = builder.buildSouth();
+    public static final VoxelShape SHAPE_E = builder.buildEast();
+    public static final VoxelShape SHAPE_W = builder.buildWest();
 
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {

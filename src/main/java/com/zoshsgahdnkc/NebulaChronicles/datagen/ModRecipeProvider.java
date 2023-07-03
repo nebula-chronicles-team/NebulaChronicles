@@ -26,6 +26,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         createIngotRecipes(c, ModItems.ORGANIC_PLASTIC_NUGGET, ModItems.ORGANIC_PLASTIC, ModBlocks.ORGANIC_PLASTIC_BLOCK);
         createIngotRecipes(c, ModItems.NICKEL_NUGGET, ModItems.NICKEL_INGOT, ModBlocks.NICKEL_BLOCK);
         createIngotRecipes(c, ModItems.NICKELSTEEL_PLASTIC_NUGGET, ModItems.NICKELSTEEL_PLASTIC, ModBlocks.NICKELSTEEL_PLASTIC_BLOCK);
+        createIngotRecipes(c, ModItems.THULIUM_188_NUGGET, ModItems.THULIUM_188_INGOT, ModBlocks.THULIUM_188_BLOCK);
         createIngotRecipes(c, ModItems.ULTRALLOY_NUGGET, ModItems.ULTRALLOY_INGOT, ModBlocks.ULTRALLOY_BLOCK);
         createIngotRecipes(c, ModItems.LEMURIUM_NUGGET, ModItems.LEMURIUM_INGOT, ModBlocks.LEMURIUM_BLOCK);
     }

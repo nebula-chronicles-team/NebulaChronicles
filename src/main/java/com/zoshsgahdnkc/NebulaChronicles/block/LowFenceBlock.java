@@ -1,5 +1,6 @@
 package com.zoshsgahdnkc.NebulaChronicles.block;
 
+import com.zoshsgahdnkc.NebulaChronicles.utils.VoxelBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -9,7 +10,6 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
@@ -20,23 +20,15 @@ public class LowFenceBlock extends Block {
     public LowFenceBlock(Properties pProperties) {
         super(pProperties);
     }
+    private static final VoxelBuilder builder = new VoxelBuilder()
+            .add(12,0,0,4,13,4)
+            .add(0,0,0,4,13,4)
+            .add(4,9,0,8,4,4);
 
-    public static final VoxelShape SHAPE_N = Shapes.or(
-            Block.box(12,0,0,16,13,4),
-            Block.box(0,0,0,4,13,4),
-            Block.box(4,9,0,12,13,4));
-    public static final VoxelShape SHAPE_S = Shapes.or(
-            Block.box(0,0,12,4,13,16),
-            Block.box(12,0,12,16,13,16),
-            Block.box(4,9,12,12,13,16));
-    public static final VoxelShape SHAPE_W = Shapes.or(
-            Block.box(0,0,0,4,13,4),
-            Block.box(0,0,12,4,13,16),
-            Block.box(0,9,4,4,13,12));
-    public static final VoxelShape SHAPE_E = Shapes.or(
-            Block.box(12,0,0,16,13,4),
-            Block.box(12,0,12,16,13,16),
-            Block.box(12,9,4,16,13,12));
+    public static final VoxelShape SHAPE_N = builder.buildNorth();
+    public static final VoxelShape SHAPE_S = builder.buildSouth();
+    public static final VoxelShape SHAPE_W = builder.buildWest();
+    public static final VoxelShape SHAPE_E = builder.buildEast();
 
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {

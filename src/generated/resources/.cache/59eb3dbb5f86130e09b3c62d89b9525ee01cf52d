@@ -1,10 +1,10 @@
-// 1.20.1	2023-07-03T02:39:16.6081066	Loot Tables
+// 1.20.1	2023-07-03T11:46:56.5106364	Loot Tables
 b47f7d5a81ea8d2ca318632f87863280ba3a0cd2 data/nch/loot_tables/blocks/archeova_stone.json
 c3c366bad90dcbaea3d9305c0a4a3db67bb3e7cc data/nch/loot_tables/blocks/bunker_bricks.json
-f1bd56f878ba8e7181092f6c28fcebb06c8c37cc data/nch/loot_tables/blocks/cargo_box.json
-dacc5b886ef509f4531fbd88aa91197e143811b8 data/nch/loot_tables/blocks/coarse_cactus_door.json
+281c6d801927d9ff116c06f77dab73a5983010a8 data/nch/loot_tables/blocks/cargo_box.json
+3cbfd5afe68ff93572c54fbf20b696004af375e4 data/nch/loot_tables/blocks/coarse_cactus_door.json
 9a5e44b0839b80610837e667e4be5e49c970d66c data/nch/loot_tables/blocks/coarse_cactus_planks.json
-e3c047821f0c6f4c07a007024a7dceb6f5fa2e87 data/nch/loot_tables/blocks/coarse_cactus_trapdoor.json
+db8ea91c08d98260d12d22ad1d1a24fcda11cc62 data/nch/loot_tables/blocks/coarse_cactus_trapdoor.json
 d92c47b0859bb440f169e62f78889550a8012db3 data/nch/loot_tables/blocks/cosmic_sand.json
 76af785fa445c2000d92047406c8fe74354fd6b6 data/nch/loot_tables/blocks/cosmic_stone.json
 3af6dbeca703d8752ee0ff31f26b4a03450fe00d data/nch/loot_tables/blocks/dark_tile.json
@@ -33,4 +33,5 @@ c0708b71349579a0a5424c5dc1489745c8b4cc84 data/nch/loot_tables/blocks/organic_pla
 1d2bc45cb6216b3224c30849b4cf11c0ae2ae42e data/nch/loot_tables/blocks/tech_tile.json
 51445e34ae049aa2bd198996390e5edc981f36f2 data/nch/loot_tables/blocks/tech_tile_with_sign.json
 935da2ed8edee335870de8cfa7c860ae4eb3deaf data/nch/loot_tables/blocks/thick_vault_stairs.json
+d6d07df2df642d0fd54b28c34919ee597dd07750 data/nch/loot_tables/blocks/thulium_188_block.json
 24c44b3b0e04290f67997bd8d880540b0a7c8f36 data/nch/loot_tables/blocks/ultralloy_block.json

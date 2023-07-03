@@ -1,5 +1,6 @@
 package com.zoshsgahdnkc.NebulaChronicles.block;
 
+import com.zoshsgahdnkc.NebulaChronicles.utils.VoxelBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -22,30 +23,16 @@ public class SimpleVaultStairsBlock extends Block {
         super(pProperties);
     }
 
-    public static final VoxelShape SHAPE_N = Shapes.or(
-            Block.box(0,3,0,16,5,8),
-            Block.box(0,11,8,16,13,16),
-            Block.box(6,0,4,10,3,8),
-            Block.box(6,3,8,10,7,12),
-            Block.box(6,6,12,10,11,16));
-    public static final VoxelShape SHAPE_S = Shapes.or(
-            Block.box(0,3,8,16,5,16),
-            Block.box(0,11,0,16,13,8),
-            Block.box(6,0,8,10,3,12),
-            Block.box(6,3,4,10,7,8),
-            Block.box(6,6,0,10,11,4));
-    public static final VoxelShape SHAPE_E = Shapes.or(
-            Block.box(8,3,0,16,5,16),
-            Block.box(0,11,0,8,13,16),
-            Block.box(8,0,6,12,3,10),
-            Block.box(4,3,6,8,7,10),
-            Block.box(0,6,6,4,11,10));
-    public static final VoxelShape SHAPE_W = Shapes.or(
-            Block.box(0,3,0,8,5,16),
-            Block.box(8,11,0,16,13,16),
-            Block.box(4,0,6,8,3,10),
-            Block.box(8,3,6,12,7,10),
-            Block.box(12,6,6,16,11,10));
+    private static final VoxelBuilder builder = new VoxelBuilder()
+            .add(0,3,0,16,2,8)
+            .add(0,11,8,16,2,8)
+            .add(6,0,4,4,3,4)
+            .add(6,3,8,4,4,4)
+            .add(6,6,12,4,5,4);
+    public static final VoxelShape SHAPE_N = builder.buildNorth();
+    public static final VoxelShape SHAPE_S = builder.buildSouth();
+    public static final VoxelShape SHAPE_E = builder.buildEast();
+    public static final VoxelShape SHAPE_W = builder.buildWest();
 
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {

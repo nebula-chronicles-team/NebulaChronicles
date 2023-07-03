@@ -4,7 +4,7 @@ license="${mod_license}"
 [[mods]] #mandatory
 modId="nch" #mandatory
 version="${mod_version}" #mandatory
-displayName="Nebula Chronicles" #mandatory
+displayName="Distant Fortress" #mandatory
 logoFile="nch.png" #optional
 credits="" #optional
 authors="Zoshsgahdnkc" #optional

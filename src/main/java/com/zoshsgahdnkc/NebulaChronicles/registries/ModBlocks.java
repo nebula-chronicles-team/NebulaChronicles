@@ -79,6 +79,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> LEMURIUM_BLOCK = registerBlock("lemurium_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> THULIUM_188_BLOCK = registerBlock("thulium_188_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> ORGANIC_PLASTIC_BLOCK = registerBlock("organic_plastic_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(2f,4f)));
     public static final RegistryObject<Block> ARCHEOVA_STONE = registerBlock("archeova_stone",
