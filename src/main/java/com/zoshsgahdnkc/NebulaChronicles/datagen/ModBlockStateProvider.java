@@ -11,7 +11,6 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Consumer;
@@ -32,16 +31,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ModBlocks.IRON_BRICKS_SLAB,
             ModBlocks.IRON_BRICKS_STAIRS,
 
-            ModBlocks.TECH_TILE_WITH_SIGN,
-
-            ModBlocks.CARGO_BOX
-
+            ModBlocks.TECH_TILE_WITH_SIGN
     );
-    private static final ImmutableSet<RegistryObject<Block>> CUSTOMS = ImmutableSet.of(
+    private static final ImmutableSet<RegistryObject<Block>> DIRECTIONALS = ImmutableSet.of(
             ModBlocks.THICK_VAULT_STAIRS,
             ModBlocks.SIMPLE_VAULT_STAIRS,
             ModBlocks.LOW_FENCE,
             ModBlocks.NICKELSTEEL_PLASTIC_CONTAINER
+    );
+    private static final ImmutableSet<RegistryObject<Block>> CUSTOMS = ImmutableSet.of(
+            ModBlocks.CARGO_BOX,
+            ModBlocks.SOLAR_PANEL,
+            ModBlocks.REDSTONE_POWER_PANEL,
+            ModBlocks.TACHYON_PROJECTION_PANEL,
+            ModBlocks.DARK_MATTER_RENDER_PANEL
     );
 
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -52,9 +55,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
 
         for (var entry: ModBlocks.BLOCKS.getEntries()) {
-            if (CUSTOMS.contains(entry)) {
+            if (DIRECTIONALS.contains(entry)) {
                 blockWithItem(entry, e -> horizontalBlock(e.get(), models().getExistingFile(getRL(ModelProvider.BLOCK_FOLDER + "/" + name(e)))));
-            }else if (!IGNORES.contains(entry)) {
+            } else if (CUSTOMS.contains(entry)) {
+                blockWithItem(entry, e -> simpleBlock(e.get(), models().getExistingFile(getRL(ModelProvider.BLOCK_FOLDER + "/" + name(e)))));
+            } else if (!IGNORES.contains(entry)) {
                 simple(entry);
             }
         }
@@ -62,7 +67,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.TECH_TILE_WITH_SIGN, b -> horizontalBlock(b.get(), cubeAll(b.get())));
         multiple(ModBlocks.IRON_COLLAGE, 3);
         multiple(ModBlocks.BUNKER_BRICKS, 3);
-        grass(ModBlocks.MOSS_SILVERBLANC_STONE, new int[]{20, 12, 2, 20, 1});
+        multipleWithWeight(ModBlocks.MOSS_SILVERBLANC_STONE, new int[]{20, 12, 2, 20, 1});
         blockWithItem(ModBlocks.FORTRESS_WALL, b -> simpleBlock(b.get(), models().cubeColumn(name(b), getRL("block/fortress_wall"), getRL("block/fortress_wall_top"))));
         blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT, b -> logBlock((RotatedPillarBlock) b.get()));
         blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT_UNLIT, b -> logBlock((RotatedPillarBlock) b.get()));
@@ -77,14 +82,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 getRL("block/coarse_cactus_door_top"),
                 "cutout");
         blockWithItem(ModBlocks.COARSE_CACTUS_TRAPDOOR, "coarse_cactus_trapdoor_bottom", b -> trapdoorBlockWithRenderType((TrapDoorBlock) b.get(), blockTexture(b.get()), true, "cutout"));
-        blockWithItem(ModBlocks.CARGO_BOX, b -> simpleBlock(b.get(), models().getExistingFile(getRL(ModelProvider.BLOCK_FOLDER + "/" + name(b)))));
     }
 
     protected void simple(RegistryObject<Block> block) {
         simpleBlockWithItem(block.get(), cubeAll(block.get()));
     }
 
-    // Generate files for a block with given counts of random textures
+    // Generate files for a cube-all block with given counts of random textures
     protected void multiple(RegistryObject<Block> block, int variants) {
         ConfiguredModel[] models = new ConfiguredModel[variants];
         for (int i = 0; i < variants; i++) {
@@ -96,8 +100,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         itemModels().withExistingParent(name(block),
                 getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_1"));
     }
-    // Generate blockstates for a grass block with multiple existing models and weight for each
-    protected void grass(RegistryObject<Block> block, int[] weight) {
+    // Generate blockstates for a block with multiple existing models and weight for each
+    protected void multipleWithWeight(RegistryObject<Block> block, int[] weight) {
         ConfiguredModel[] models = new ConfiguredModel[weight.length];
         for (int i = 0; i < weight.length; i++) {
             models[i] = new ConfiguredModel(models().getExistingFile(getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_" + (i+1))), 0, 0, false, weight[i]);

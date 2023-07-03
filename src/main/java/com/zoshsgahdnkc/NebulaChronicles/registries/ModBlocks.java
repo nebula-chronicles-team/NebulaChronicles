@@ -96,6 +96,14 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> MOSS_SILVERBLANC_STONE = registerBlock("moss_silverblanc_stone",
             () -> new ModNyliumBlock(BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get()).sound(SoundType.NYLIUM).randomTicks(), SILVERBLANC_STONE));
+   public static final RegistryObject<Block> SOLAR_PANEL = registerBlock("solar_panel",
+           () -> new EnergyPlate(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> REDSTONE_POWER_PANEL = registerBlock("redstone_power_panel",
+            () -> new EnergyPlate(2, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> TACHYON_PROJECTION_PANEL = registerBlock("tachyon_projection_panel",
+            () -> new EnergyPlate(3, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> DARK_MATTER_RENDER_PANEL = registerBlock("dark_matter_render_panel",
+            () -> new EnergyPlate(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }

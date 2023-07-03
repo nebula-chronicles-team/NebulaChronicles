@@ -41,7 +41,6 @@ public class LowFenceBlock extends Block {
         };
     }
 
-
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {

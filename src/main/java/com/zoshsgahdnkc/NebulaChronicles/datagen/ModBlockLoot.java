@@ -2,9 +2,16 @@ package com.zoshsgahdnkc.NebulaChronicles.datagen;
 
 import com.google.common.collect.ImmutableSet;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModBlocks;
+import com.zoshsgahdnkc.NebulaChronicles.registries.ModItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.providers.number.BinomialDistributionGenerator;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
@@ -31,7 +38,9 @@ public class ModBlockLoot extends BlockLootSubProvider {
         add(ModBlocks.COARSE_CACTUS_TRAPDOOR.get(), (this::createDoorTable));
         add(ModBlocks.MOSS_SILVERBLANC_STONE.get(),(block) ->
                 createSingleItemTableWithSilkTouch(block, ModBlocks.SILVERBLANC_STONE.get()));
-        add(ModBlocks.CARGO_BOX.get(), noDrop());
+        add(ModBlocks.CARGO_BOX.get(), new LootTable.Builder().withPool(this.applyExplosionCondition(ModBlocks.CARGO_BOX.get(),
+                LootPool.lootPool().setRolls(BinomialDistributionGenerator.binomial(2, 0.5F))
+                        .add(LootItem.lootTableItem(ModItems.LEMON.get())).apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))));
     }
 
     @Override

@@ -29,6 +29,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         blockWithTexture(ModBlocks.FORTRESS_DOOR);
         blockWithTexture(ModBlocks.COARSE_CACTUS_DOOR);
+        blockWithTexture(ModBlocks.SOLAR_PANEL);
+        blockWithTexture(ModBlocks.REDSTONE_POWER_PANEL);
+        blockWithTexture(ModBlocks.TACHYON_PROJECTION_PANEL);
+        blockWithTexture(ModBlocks.DARK_MATTER_RENDER_PANEL);
     }
 
     private ItemModelBuilder blockWithTexture(RegistryObject<Block> block) {

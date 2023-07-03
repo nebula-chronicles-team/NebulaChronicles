@@ -54,6 +54,10 @@ public class ModCreativeModeTabs {
             .icon(() -> new ItemStack(ModItems.CPU.get()))
             .withTabsBefore(TAB_MISC.getId())
             .displayItems((param, tab) -> {
+                tab.accept(ModBlocks.SOLAR_PANEL.get());
+                tab.accept(ModBlocks.REDSTONE_POWER_PANEL.get());
+                tab.accept(ModBlocks.TACHYON_PROJECTION_PANEL.get());
+                tab.accept(ModBlocks.DARK_MATTER_RENDER_PANEL.get());
                 tab.accept(ModItems.RAW_NICKEL.get());
                 tab.accept(ModItems.NICKEL_INGOT.get());
                 tab.accept(ModItems.ORGANIC_PLASTIC.get());

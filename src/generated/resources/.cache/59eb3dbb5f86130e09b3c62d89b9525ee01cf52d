@@ -1,12 +1,13 @@
-// 1.20.1	2023-07-03T11:46:56.5106364	Loot Tables
+// 1.20.1	2023-07-03T23:44:20.711049	Loot Tables
 b47f7d5a81ea8d2ca318632f87863280ba3a0cd2 data/nch/loot_tables/blocks/archeova_stone.json
 c3c366bad90dcbaea3d9305c0a4a3db67bb3e7cc data/nch/loot_tables/blocks/bunker_bricks.json
-281c6d801927d9ff116c06f77dab73a5983010a8 data/nch/loot_tables/blocks/cargo_box.json
+8026915ffd16a7ff0d5ef7f66c3c6c92d7217fbc data/nch/loot_tables/blocks/cargo_box.json
 3cbfd5afe68ff93572c54fbf20b696004af375e4 data/nch/loot_tables/blocks/coarse_cactus_door.json
 9a5e44b0839b80610837e667e4be5e49c970d66c data/nch/loot_tables/blocks/coarse_cactus_planks.json
 db8ea91c08d98260d12d22ad1d1a24fcda11cc62 data/nch/loot_tables/blocks/coarse_cactus_trapdoor.json
 d92c47b0859bb440f169e62f78889550a8012db3 data/nch/loot_tables/blocks/cosmic_sand.json
 76af785fa445c2000d92047406c8fe74354fd6b6 data/nch/loot_tables/blocks/cosmic_stone.json
+3331212390908432791488c2cbe6ec05a560c405 data/nch/loot_tables/blocks/dark_matter_render_panel.json
 3af6dbeca703d8752ee0ff31f26b4a03450fe00d data/nch/loot_tables/blocks/dark_tile.json
 b8cb887bc4ed818c3bb73ff23cee6d5cbb262bb2 data/nch/loot_tables/blocks/deepspace_stone.json
 a501cb44001464ecc96a7d79944f8618a990b7e5 data/nch/loot_tables/blocks/eroded_dark_tile.json
@@ -28,8 +29,11 @@ acbea5ee31f01f0bb6d458a395b6166d0c59e984 data/nch/loot_tables/blocks/nickelsteel
 25609fdab02fcef68a880f2d978a58da5385bd3a data/nch/loot_tables/blocks/nickelsteel_plastic_container.json
 2294a55271108a92cf046f93a155405b7bd10fe6 data/nch/loot_tables/blocks/nickel_block.json
 c0708b71349579a0a5424c5dc1489745c8b4cc84 data/nch/loot_tables/blocks/organic_plastic_block.json
+9d9b177a5c78f4d051eb6a9984ca724c74435d8a data/nch/loot_tables/blocks/redstone_power_panel.json
 640f47b21ae71c4746e4c8a18ad20dbd5d403d21 data/nch/loot_tables/blocks/silverblanc_stone.json
 04002049f7e8e60b3e38a3691d0a8007d8a3aef4 data/nch/loot_tables/blocks/simple_vault_stairs.json
+a9b4eb97f74ac318555ef16934c3e801cc5879fa data/nch/loot_tables/blocks/solar_panel.json
+c1a8408693eb98d99412f9122ed11abffdd938de data/nch/loot_tables/blocks/tachyon_projection_panel.json
 1d2bc45cb6216b3224c30849b4cf11c0ae2ae42e data/nch/loot_tables/blocks/tech_tile.json
 51445e34ae049aa2bd198996390e5edc981f36f2 data/nch/loot_tables/blocks/tech_tile_with_sign.json
 935da2ed8edee335870de8cfa7c860ae4eb3deaf data/nch/loot_tables/blocks/thick_vault_stairs.json
