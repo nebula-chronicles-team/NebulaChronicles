@@ -2,6 +2,7 @@ package com.zoshsgahdnkc.NebulaChronicles.registries;
 
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import com.zoshsgahdnkc.NebulaChronicles.block.*;
+import com.zoshsgahdnkc.NebulaChronicles.block.ModNyliumBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -94,7 +95,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> SILVERBLANC_STONE = registerBlock("silverblanc_stone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> MOSS_SILVERBLANC_STONE = registerBlock("moss_silverblanc_stone",
-            () -> new Block(BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get()).sound(SoundType.NYLIUM)));
+            () -> new ModNyliumBlock(BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get()).sound(SoundType.NYLIUM).randomTicks(), SILVERBLANC_STONE));
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }

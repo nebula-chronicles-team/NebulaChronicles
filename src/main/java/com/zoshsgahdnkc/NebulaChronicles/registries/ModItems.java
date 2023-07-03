@@ -1,5 +1,6 @@
 package com.zoshsgahdnkc.NebulaChronicles.registries;
 
+import com.zoshsgahdnkc.NebulaChronicles.item.LemonItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.RecordItem;
@@ -41,7 +42,7 @@ public class ModItems {
     public static final RegistryObject<Item> CALCITE_CASING = ITEMS.register("calcite_casing", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CPU = ITEMS.register("cpu", () -> new Item(new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> ROCKET_FUEL = ITEMS.register("rocket_fuel", () -> new Item(new Item.Properties()));
-
+    public static final RegistryObject<Item> LEMON = ITEMS.register("lemon", () -> new LemonItem(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {

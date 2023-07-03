@@ -62,6 +62,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.TECH_TILE_WITH_SIGN, b -> horizontalBlock(b.get(), cubeAll(b.get())));
         multiple(ModBlocks.IRON_COLLAGE, 3);
         multiple(ModBlocks.BUNKER_BRICKS, 3);
+        grass(ModBlocks.MOSS_SILVERBLANC_STONE, new int[]{20, 12, 2, 20, 1});
         blockWithItem(ModBlocks.FORTRESS_WALL, b -> simpleBlock(b.get(), models().cubeColumn(name(b), getRL("block/fortress_wall"), getRL("block/fortress_wall_top"))));
         blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT, b -> logBlock((RotatedPillarBlock) b.get()));
         blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT_UNLIT, b -> logBlock((RotatedPillarBlock) b.get()));
@@ -83,12 +84,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(block.get(), cubeAll(block.get()));
     }
 
-    // Generated files for a block with given counts of random textures
+    // Generate files for a block with given counts of random textures
     protected void multiple(RegistryObject<Block> block, int variants) {
         ConfiguredModel[] models = new ConfiguredModel[variants];
         for (int i = 0; i < variants; i++) {
             models[i] = new ConfiguredModel(models().cubeAll(name(block) + "_" + (i + 1),
                     getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_" + (i + 1))));
+        }
+        var builder = getVariantBuilder(block.get());
+        builder.addModels(builder.partialState(), models);
+        itemModels().withExistingParent(name(block),
+                getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_1"));
+    }
+    // Generate blockstates for a grass block with multiple existing models and weight for each
+    protected void grass(RegistryObject<Block> block, int[] weight) {
+        ConfiguredModel[] models = new ConfiguredModel[weight.length];
+        for (int i = 0; i < weight.length; i++) {
+            models[i] = new ConfiguredModel(models().getExistingFile(getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_" + (i+1))), 0, 0, false, weight[i]);
         }
         var builder = getVariantBuilder(block.get());
         builder.addModels(builder.partialState(), models);

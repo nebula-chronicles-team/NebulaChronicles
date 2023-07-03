@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-03T02:39:16.600182	Item Models: nch
+// 1.20.1	2023-07-03T14:15:18.2258678	Item Models: nch
 6d1d415fa845640c1fb1a21b73c2aa583a01eaed assets/nch/models/item/battery_waste.json
 0e7f7daec937f2266fefeed41b5d7cb44c01f052 assets/nch/models/item/calcite_casing.json
 1cbbf479cf2b1f54277147154ab5f329845d77a9 assets/nch/models/item/coal_dust.json
@@ -8,6 +8,7 @@ cee56f6f2b5208039c7d3ab185259cb27f9f60c0 assets/nch/models/item/cpu.json
 fd5adb2a41dc4ea5c8628049a7c6a3980cc13986 assets/nch/models/item/empty_battery.json
 27d7724463597855c650c863554ae5636e448d6b assets/nch/models/item/fortress_door.json
 2f4c0332f4497e1bd641ba16a0b0db6a783fecb5 assets/nch/models/item/golden_coil.json
+fc1afbf0af6c21628a3a5d3f4bff95a48f381ce6 assets/nch/models/item/lemon.json
 d1ac976efbbe5e1d05e48442a3451d899e7472b1 assets/nch/models/item/lemurium_ingot.json
 d7f9b8b2382f915a7043ebb126680fef1d0c52f0 assets/nch/models/item/lemurium_nugget.json
 504da4380d4cf73543bef0e7787cedaa5466e53f assets/nch/models/item/music_disc_halfway.json

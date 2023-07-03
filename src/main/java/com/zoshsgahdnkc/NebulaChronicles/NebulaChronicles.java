@@ -31,7 +31,6 @@ public class NebulaChronicles {
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
-        modEventBus.addListener(AddItems::addItems);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
