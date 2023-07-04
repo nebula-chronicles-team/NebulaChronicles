@@ -1,6 +1,7 @@
 package com.zoshsgahdnkc.NebulaChronicles.registries;
 
 
+import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraftforge.common.util.ForgeSoundType;
@@ -20,11 +21,11 @@ public class ModSounds {
 
     public static RegistryObject<SoundEvent> MUSIC_DISC_HALFWAY = register("music_disc_halfway");
 
-    public static final ForgeSoundType TECH_BLOCK = new ForgeSoundType(0.7f,1f,
+    public static final ForgeSoundType TECH_BLOCK = new ForgeSoundType(0.6f,1f,
             TECH_BLOCK_BREAK,TECH_BLOCK_STEP,TECH_BLOCK_PLACE,TECH_BLOCK_HIT,TECH_BLOCK_FALL);
 
     private static RegistryObject<SoundEvent> register(String name){
         return SOUND_EVENT.register(name, ()->SoundEvent.createFixedRangeEvent(
-                new ResourceLocation(com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles.MODID,name),3f));
+                new ResourceLocation(NebulaChronicles.MODID,name),3f));
     }
 }
