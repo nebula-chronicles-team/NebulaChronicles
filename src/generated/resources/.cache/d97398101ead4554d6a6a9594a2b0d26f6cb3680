@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-03T23:46:04.7215863	Block States: nch
+// 1.20.1	2023-07-04T14:06:01.9652512	Block States: nch
 ea89adf252e5c890202a896169461df0b2fc1a12 assets/nch/blockstates/archeova_stone.json
 791b01c4ed47ae0a89cbbf4b890dad4a2870c482 assets/nch/blockstates/bunker_bricks.json
 724f744b19175264a3a1c05f27568cbf65d9426a assets/nch/blockstates/cargo_box.json
@@ -39,6 +39,7 @@ b8c64d6acdbd629aa90567d5249510d1963a5e54 assets/nch/blockstates/nickelsteel_plas
 5b2cceecfcd486ec2d9d2ce1bd4d76d1260ab427 assets/nch/blockstates/thick_vault_stairs.json
 2969ebf9c819f1de2ae1fcdd224440fa7fe11b58 assets/nch/blockstates/thulium_188_block.json
 e8fefbc492a3d30af9d89885004f43e9f288197d assets/nch/blockstates/ultralloy_block.json
+b59028f9089acdfb1efe148863a9053207d6ba43 assets/nch/blockstates/wall_paper.json
 d5ebffbcca0d2247ae20a96f87ec6b109211aded assets/nch/models/block/archeova_stone.json
 7da885d63f80daef82e800e23d036643360a1ac5 assets/nch/models/block/bunker_bricks_1.json
 47f809a36789c3ed654b7e82e6166b87b278dda8 assets/nch/models/block/bunker_bricks_2.json
@@ -95,6 +96,10 @@ e3070ed7873fdb3af26c400f31f7bed2c337274e assets/nch/models/block/light_tile.json
 99f18069d798267a3dd3f027255c41676c4757eb assets/nch/models/block/tech_tile_with_sign.json
 ff9cb26641166eace36c34784b015b2a7b97074e assets/nch/models/block/thulium_188_block.json
 3815037bb0b528da47c6e81694b89eb97071040c assets/nch/models/block/ultralloy_block.json
+3bdcda87b82af1eac57658e7272b550641feb8b7 assets/nch/models/block/wall_paper_bottom.json
+92b63561a39b396d591bb4102f3067fdf1aafc8d assets/nch/models/block/wall_paper_double.json
+aae3cfcbb4fa4bb02a6e9ff6e43c28429360eb90 assets/nch/models/block/wall_paper_middle.json
+1976186705705ddb72f7202e3cf22dfb0e6ff47e assets/nch/models/block/wall_paper_top.json
 4e86fcef9de46cd56d34317fede653fe4d017a3b assets/nch/models/item/archeova_stone.json
 874863327f2a852632bcb3b9beb5d8d9f4f97375 assets/nch/models/item/bunker_bricks.json
 aa4f3613d526f6aa64d0e05ad50a279af239e406 assets/nch/models/item/cargo_box.json
@@ -133,3 +138,4 @@ da7f438c037d3631e489269e07c49c842d8b2b92 assets/nch/models/item/tachyon_projecti
 293b5479c2b331142dbfb9f02805a3559864bca3 assets/nch/models/item/thick_vault_stairs.json
 f4a9dfb6b1de29050d1ae6721ecbc790c81649bf assets/nch/models/item/thulium_188_block.json
 20b1acdf43fb6b0a88bc4d325f1dc9e8e6d0e69b assets/nch/models/item/ultralloy_block.json
+3ac3020fc54acf954a1aacfc96dac733c6902a48 assets/nch/models/item/wall_paper.json

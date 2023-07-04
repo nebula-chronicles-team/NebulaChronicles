@@ -104,6 +104,8 @@ public class ModBlocks {
             () -> new EnergyPlate(3, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> DARK_MATTER_RENDER_PANEL = registerBlock("dark_matter_render_panel",
             () -> new EnergyPlate(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> WALL_PAPER = registerBlock("wall_paper",
+            () -> new ColumnBlock( BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }

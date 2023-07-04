@@ -2,6 +2,7 @@ package com.zoshsgahdnkc.NebulaChronicles.datagen;
 
 import com.google.common.collect.ImmutableSet;
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
+import com.zoshsgahdnkc.NebulaChronicles.block.ColumnBlock;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -31,7 +32,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ModBlocks.IRON_BRICKS_SLAB,
             ModBlocks.IRON_BRICKS_STAIRS,
 
-            ModBlocks.TECH_TILE_WITH_SIGN
+            ModBlocks.TECH_TILE_WITH_SIGN,
+            ModBlocks.WALL_PAPER
     );
     private static final ImmutableSet<RegistryObject<Block>> DIRECTIONALS = ImmutableSet.of(
             ModBlocks.THICK_VAULT_STAIRS,
@@ -65,9 +67,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         }
 
         blockWithItem(ModBlocks.TECH_TILE_WITH_SIGN, b -> horizontalBlock(b.get(), cubeAll(b.get())));
-        multiple(ModBlocks.IRON_COLLAGE, 3);
-        multiple(ModBlocks.BUNKER_BRICKS, 3);
-        multipleWithWeight(ModBlocks.MOSS_SILVERBLANC_STONE, new int[]{20, 12, 2, 20, 1});
+        multipleSimple(ModBlocks.IRON_COLLAGE, 3);
+        multipleSimple(ModBlocks.BUNKER_BRICKS, 3);
+        multipleExisting(ModBlocks.MOSS_SILVERBLANC_STONE, new int[]{20, 12, 2, 20, 1});
         blockWithItem(ModBlocks.FORTRESS_WALL, b -> simpleBlock(b.get(), models().cubeColumn(name(b), getRL("block/fortress_wall"), getRL("block/fortress_wall_top"))));
         blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT, b -> logBlock((RotatedPillarBlock) b.get()));
         blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT_UNLIT, b -> logBlock((RotatedPillarBlock) b.get()));
@@ -82,6 +84,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 getRL("block/coarse_cactus_door_top"),
                 "cutout");
         blockWithItem(ModBlocks.COARSE_CACTUS_TRAPDOOR, "coarse_cactus_trapdoor_bottom", b -> trapdoorBlockWithRenderType((TrapDoorBlock) b.get(), blockTexture(b.get()), true, "cutout"));
+        columnBlock(ModBlocks.WALL_PAPER);
     }
 
     protected void simple(RegistryObject<Block> block) {
@@ -89,7 +92,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     // Generate files for a cube-all block with given counts of random textures
-    protected void multiple(RegistryObject<Block> block, int variants) {
+    protected void multipleSimple(RegistryObject<Block> block, int variants) {
         ConfiguredModel[] models = new ConfiguredModel[variants];
         for (int i = 0; i < variants; i++) {
             models[i] = new ConfiguredModel(models().cubeAll(name(block) + "_" + (i + 1),
@@ -100,8 +103,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         itemModels().withExistingParent(name(block),
                 getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_1"));
     }
-    // Generate blockstates for a block with multiple existing models and weight for each
-    protected void multipleWithWeight(RegistryObject<Block> block, int[] weight) {
+    // Generate blockstates for a block with multiple EXISTING models and weight for each
+    protected void multipleExisting(RegistryObject<Block> block, int[] weight) {
         ConfiguredModel[] models = new ConfiguredModel[weight.length];
         for (int i = 0; i < weight.length; i++) {
             models[i] = new ConfiguredModel(models().getExistingFile(getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_" + (i+1))), 0, 0, false, weight[i]);
@@ -127,6 +130,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void blockWithItem(RegistryObject<Block> block, String filename, Consumer<RegistryObject<Block>> action) {
         action.accept(block);
         blockItem(block, filename);
+    }
+    protected void columnBlock(RegistryObject<Block> block) {
+        ResourceLocation end = getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_end");
+        getVariantBuilder(block.get())
+                .partialState().with(ColumnBlock.UP, true).with(ColumnBlock.DOWN, true)
+                .addModels(new ConfiguredModel(models().cubeColumn(name(block) + "_middle", getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_middle"), end)))
+                .partialState().with(ColumnBlock.UP, true).with(ColumnBlock.DOWN, false)
+                .addModels(new ConfiguredModel(models().cubeColumn(name(block) + "_bottom", getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_bottom"), end)))
+                .partialState().with(ColumnBlock.UP, false).with(ColumnBlock.DOWN, true)
+                .addModels(new ConfiguredModel(models().cubeColumn(name(block) + "_top", getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_top"), end)))
+                .partialState().with(ColumnBlock.UP, false).with(ColumnBlock.DOWN, false)
+                .addModels(new ConfiguredModel(models().cubeColumn(name(block) + "_double", getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_double"), end)));
+        blockItem(block, name(block) + "_double");
     }
     protected String name(RegistryObject<Block> block) {
         return block.getId().getPath();

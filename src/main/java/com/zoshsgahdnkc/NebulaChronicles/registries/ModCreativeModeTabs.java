@@ -46,6 +46,7 @@ public class ModCreativeModeTabs {
                 tab.accept(ModBlocks.COARSE_CACTUS_TRAPDOOR.get());
                 tab.accept(ModBlocks.NICKELSTEEL_PLASTIC_CONTAINER.get());
                 tab.accept(ModBlocks.CARGO_BOX.get());
+                tab.accept(ModBlocks.WALL_PAPER.get());
             })
             .build());
 

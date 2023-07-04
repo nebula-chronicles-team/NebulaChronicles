@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-03T23:44:20.711049	Loot Tables
+// 1.20.1	2023-07-04T14:06:01.9682404	Loot Tables
 b47f7d5a81ea8d2ca318632f87863280ba3a0cd2 data/nch/loot_tables/blocks/archeova_stone.json
 c3c366bad90dcbaea3d9305c0a4a3db67bb3e7cc data/nch/loot_tables/blocks/bunker_bricks.json
 8026915ffd16a7ff0d5ef7f66c3c6c92d7217fbc data/nch/loot_tables/blocks/cargo_box.json
@@ -39,3 +39,4 @@ c1a8408693eb98d99412f9122ed11abffdd938de data/nch/loot_tables/blocks/tachyon_pro
 935da2ed8edee335870de8cfa7c860ae4eb3deaf data/nch/loot_tables/blocks/thick_vault_stairs.json
 d6d07df2df642d0fd54b28c34919ee597dd07750 data/nch/loot_tables/blocks/thulium_188_block.json
 24c44b3b0e04290f67997bd8d880540b0a7c8f36 data/nch/loot_tables/blocks/ultralloy_block.json
+a4b85b33f7a24bbfa95c15cd1f2d9ae3978ae4b9 data/nch/loot_tables/blocks/wall_paper.json

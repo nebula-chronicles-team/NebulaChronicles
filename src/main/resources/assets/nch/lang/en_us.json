@@ -35,6 +35,11 @@
   "block.nch.deepspace_stone": "Deepspace Stone",
   "block.nch.silverblanc_stone": "Silverblanc Stone",
   "block.nch.moss_silverblanc_stone": "Moss Silverblanc Stone",
+  "block.nch.solar_panel": "Solar Panel",
+  "block.nch.redstone_power_panel": "Redstone Power Panel",
+  "block.nch.tachyon_projection_panel": "Tachyon Projection Panel",
+  "block.nch.dark_matter_render_panel": "Dark Matter Render Panel",
+  "block.nch.wall_paper": "Wall Paper",
 
   "item.nch.lemon": "LEMON",
   "item.nch.music_disc_halfway": "Music Disc",
@@ -68,5 +73,9 @@
   "item_Group.nch.tab_misc": "Distant Fortress - Misc",
   "item_Group.nch.tab_industry": "Distant Fortress - Industry",
   "item_Group.nch.tab_lemon": "Distant Fortress - Lemons",
-  "container.nch.nickelsteel_plastic_container": "Nickelsteel Plastic Container"
+
+  "container.nch.nickelsteel_plastic_container": "Nickelsteel Plastic Container",
+
+  "advancement.nch.lemon.title": "LEMON",
+  "advancement.nch.lemon.desc": "YOU HEARD IT RIGHT LEEEEEMOOOOON"
 }
