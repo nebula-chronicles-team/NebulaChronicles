@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-04T14:06:01.9652512	Block States: nch
+// 1.20.1	2023-08-09T11:09:07.7553783	Block States: nch
 ea89adf252e5c890202a896169461df0b2fc1a12 assets/nch/blockstates/archeova_stone.json
 791b01c4ed47ae0a89cbbf4b890dad4a2870c482 assets/nch/blockstates/bunker_bricks.json
 724f744b19175264a3a1c05f27568cbf65d9426a assets/nch/blockstates/cargo_box.json
@@ -31,8 +31,10 @@ b8c64d6acdbd629aa90567d5249510d1963a5e54 assets/nch/blockstates/nickelsteel_plas
 29b0878a67d58c9acae5ab424749e51f9a81eaae assets/nch/blockstates/organic_plastic_block.json
 655b42fee46ae8a9b0b675126949480dcc3b4356 assets/nch/blockstates/redstone_power_panel.json
 0cdedb03ba68db2e421ec4efbad090d7c768d71f assets/nch/blockstates/silverblanc_stone.json
+d7ab3d8fef6a7d1444e614870c2b2f6afeb1880e assets/nch/blockstates/silverblanc_stone_bricks.json
 7559c6a54b611db19d23005e8d68cd75a0e3d1d4 assets/nch/blockstates/simple_vault_stairs.json
 268393af334bd9730637c6a391d40202042b6f2e assets/nch/blockstates/solar_panel.json
+84eeebe7a4e3a456178ccf834a763913d42add90 assets/nch/blockstates/strange_fern.json
 8bbb99b22145fb1ab35d8fda498920ceab703779 assets/nch/blockstates/tachyon_projection_panel.json
 60e116970173a2c08d6b41b0fa2335fb2aa73b30 assets/nch/blockstates/tech_tile.json
 74e536a5a38b9f0e1940314d61a6b784d674d86c assets/nch/blockstates/tech_tile_with_sign.json
@@ -40,6 +42,7 @@ b8c64d6acdbd629aa90567d5249510d1963a5e54 assets/nch/blockstates/nickelsteel_plas
 2969ebf9c819f1de2ae1fcdd224440fa7fe11b58 assets/nch/blockstates/thulium_188_block.json
 e8fefbc492a3d30af9d89885004f43e9f288197d assets/nch/blockstates/ultralloy_block.json
 b59028f9089acdfb1efe148863a9053207d6ba43 assets/nch/blockstates/wall_paper.json
+3e3833a21ccdfe9ade3adc7e2f1e4c96b60b6a3c assets/nch/blockstates/white_bud.json
 d5ebffbcca0d2247ae20a96f87ec6b109211aded assets/nch/models/block/archeova_stone.json
 7da885d63f80daef82e800e23d036643360a1ac5 assets/nch/models/block/bunker_bricks_1.json
 47f809a36789c3ed654b7e82e6166b87b278dda8 assets/nch/models/block/bunker_bricks_2.json
@@ -92,6 +95,8 @@ e3070ed7873fdb3af26c400f31f7bed2c337274e assets/nch/models/block/light_tile.json
 371ca10c850825d2fffa6d082180c8a35cb3d04c assets/nch/models/block/nickel_block.json
 430a6b4891e6964a79935d997753234fe762b7ca assets/nch/models/block/organic_plastic_block.json
 3e958f4dbd065d98f95ca577dc71a03ae55868a5 assets/nch/models/block/silverblanc_stone.json
+00da3886c2d4bd3ccb08b524c2921adada5a7b40 assets/nch/models/block/silverblanc_stone_bricks.json
+ab50c58f1bc83cefe0d73c5a32e5b8ecd2ffb08b assets/nch/models/block/strange_fern.json
 218c84ed750c1dfed18fcf16ba2a23ad2b52f520 assets/nch/models/block/tech_tile.json
 99f18069d798267a3dd3f027255c41676c4757eb assets/nch/models/block/tech_tile_with_sign.json
 ff9cb26641166eace36c34784b015b2a7b97074e assets/nch/models/block/thulium_188_block.json
@@ -130,8 +135,10 @@ bf6df9d2bfe1384668551750998632c7fa3456ab assets/nch/models/item/nickelsteel_plas
 8f3eedea35fc2b5e63f5d480ccc465027674ff4f assets/nch/models/item/organic_plastic_block.json
 5a7a0b8fcf701612e1b7bc24a3a529a68c074fc1 assets/nch/models/item/redstone_power_panel.json
 b0caa090e32544820221e30b3945ca3a98203a01 assets/nch/models/item/silverblanc_stone.json
+b254131d98484a7a5681494f119d49977d19b31a assets/nch/models/item/silverblanc_stone_bricks.json
 4191d3860d86a3c0131b94164a9cec582577efd5 assets/nch/models/item/simple_vault_stairs.json
 fba908be7ae6e9f5a777f8fe9fe25685dd677f58 assets/nch/models/item/solar_panel.json
+feed4167209b92aec1ed3ceddf7d9b838bbc0ced assets/nch/models/item/strange_fern.json
 da7f438c037d3631e489269e07c49c842d8b2b92 assets/nch/models/item/tachyon_projection_panel.json
 70c5733378cced351b108fe409085592706978c0 assets/nch/models/item/tech_tile.json
 253e3c4ce2662e40b9f862c47557754bc84ae296 assets/nch/models/item/tech_tile_with_sign.json

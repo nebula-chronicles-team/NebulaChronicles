@@ -106,6 +106,12 @@ public class ModBlocks {
             () -> new EnergyPlate(4, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> WALL_PAPER = registerBlock("wall_paper",
             () -> new ColumnBlock( BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> WHITE_BUD = registerBlock("white_bud",
+            () -> new WhiteBudBlock( BlockBehaviour.Properties.copy(Blocks.GRASS)));
+    public static final RegistryObject<Block> STRANGE_FERN = registerBlock("strange_fern",
+            () -> new BushBlock( BlockBehaviour.Properties.copy(Blocks.GRASS)));
+    public static final RegistryObject<Block> SILVERBLANC_STONE_BRICKS = registerBlock("silverblanc_stone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get()).strength(1.5f)));
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }

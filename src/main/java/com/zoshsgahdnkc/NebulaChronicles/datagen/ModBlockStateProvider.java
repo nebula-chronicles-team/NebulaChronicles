@@ -25,6 +25,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ModBlocks.IRON_COLLAGE,
             ModBlocks.BUNKER_BRICKS,
             ModBlocks.MOSS_SILVERBLANC_STONE,
+            ModBlocks.WHITE_BUD,
 
             ModBlocks.FORTRESS_WALL,
             ModBlocks.FORTRESS_WALL_LIGHT,
@@ -40,6 +41,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ModBlocks.SIMPLE_VAULT_STAIRS,
             ModBlocks.LOW_FENCE,
             ModBlocks.NICKELSTEEL_PLASTIC_CONTAINER
+    );
+    private static final ImmutableSet<RegistryObject<Block>> CROSS = ImmutableSet.of(
+            ModBlocks.STRANGE_FERN
     );
     private static final ImmutableSet<RegistryObject<Block>> CUSTOMS = ImmutableSet.of(
             ModBlocks.CARGO_BOX,
@@ -61,6 +65,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockWithItem(entry, e -> horizontalBlock(e.get(), models().getExistingFile(getRL(ModelProvider.BLOCK_FOLDER + "/" + name(e)))));
             } else if (CUSTOMS.contains(entry)) {
                 blockWithItem(entry, e -> simpleBlock(e.get(), models().getExistingFile(getRL(ModelProvider.BLOCK_FOLDER + "/" + name(e)))));
+            } else if (CROSS.contains(entry)) {
+                simpleBlock(entry.get(), models().cross(name(entry), getRL(ModelProvider.BLOCK_FOLDER + "/" + name(entry))).renderType("cutout"));
+                itemModels().singleTexture(name(entry), mcLoc("item/generated"), "layer0", getRL(ModelProvider.BLOCK_FOLDER + "/" + name(entry)));
             } else if (!IGNORES.contains(entry)) {
                 simple(entry);
             }
@@ -69,7 +76,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.TECH_TILE_WITH_SIGN, b -> horizontalBlock(b.get(), cubeAll(b.get())));
         multipleSimple(ModBlocks.IRON_COLLAGE, 3);
         multipleSimple(ModBlocks.BUNKER_BRICKS, 3);
-        multipleExisting(ModBlocks.MOSS_SILVERBLANC_STONE, new int[]{20, 12, 2, 20, 1});
+        multipleExisting(ModBlocks.MOSS_SILVERBLANC_STONE, 20, 12, 2, 20, 1);
+        multipleExistingWithRotation(ModBlocks.WHITE_BUD, 2);
         blockWithItem(ModBlocks.FORTRESS_WALL, b -> simpleBlock(b.get(), models().cubeColumn(name(b), getRL("block/fortress_wall"), getRL("block/fortress_wall_top"))));
         blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT, b -> logBlock((RotatedPillarBlock) b.get()));
         blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT_UNLIT, b -> logBlock((RotatedPillarBlock) b.get()));
@@ -104,7 +112,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_1"));
     }
     // Generate blockstates for a block with multiple EXISTING models and weight for each
-    protected void multipleExisting(RegistryObject<Block> block, int[] weight) {
+    protected void multipleExisting(RegistryObject<Block> block, int... weight) {
         ConfiguredModel[] models = new ConfiguredModel[weight.length];
         for (int i = 0; i < weight.length; i++) {
             models[i] = new ConfiguredModel(models().getExistingFile(getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_" + (i+1))), 0, 0, false, weight[i]);
@@ -113,6 +121,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         builder.addModels(builder.partialState(), models);
         itemModels().withExistingParent(name(block),
                 getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_1"));
+    }
+    // randomly generated plant feature, white bud for instance
+    protected void multipleExistingWithRotation(RegistryObject<Block> block, int count) {
+        ConfiguredModel[] models = new ConfiguredModel[count * 4];
+        for (int i = 0; i < count; i++) {
+            var file = models().getExistingFile(getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_" + (i+1)));
+            models[i * 4] = new ConfiguredModel(file, 0, 0, false);
+            models[i * 4 + 1] = new ConfiguredModel(file, 0, 90, false);
+            models[i * 4 + 2] = new ConfiguredModel(file, 0, 180, false);
+            models[i * 4 + 3] = new ConfiguredModel(file, 0, 270, false);
+        }
+        var builder = getVariantBuilder(block.get());
+        builder.addModels(builder.partialState(), models);
     }
 
     protected void slab(RegistryObject<Block> block, ResourceLocation side, ResourceLocation end) {

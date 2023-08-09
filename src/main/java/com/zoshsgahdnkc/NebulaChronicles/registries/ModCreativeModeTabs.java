@@ -96,7 +96,7 @@ public class ModCreativeModeTabs {
             .title(Component.translatable("item_Group."+ MODID +".tab_lemon"))
             .icon(() -> new ItemStack(ModItems.LEMON.get()))
             .withTabsBefore(TAB_INDUSTRY.getId())
-            .displayItems((param, tab) -> {if (param.hasPermissions()) {
+            .displayItems((param, tab) -> {if (true || param.hasPermissions()) {
                 tab.accept(ModItems.LEMON.get());
                 tab.accept(ModBlocks.ARCHEOVA_STONE.get());
                 tab.accept(ModBlocks.COSMIC_SAND.get());
@@ -104,6 +104,9 @@ public class ModCreativeModeTabs {
                 tab.accept(ModBlocks.DEEPSPACE_STONE.get());
                 tab.accept(ModBlocks.SILVERBLANC_STONE.get());
                 tab.accept(ModBlocks.MOSS_SILVERBLANC_STONE.get());
+                tab.accept(ModBlocks.SILVERBLANC_STONE_BRICKS.get());
+                tab.accept(ModBlocks.WHITE_BUD.get());
+                tab.accept(ModBlocks.STRANGE_FERN.get());
             }})
             .build());
 }
