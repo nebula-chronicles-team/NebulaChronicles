@@ -92,6 +92,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(7.5f,12f)));
     public static final RegistryObject<Block> COSMIC_SAND = registerBlock("cosmic_sand",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SAND).strength(1f)));
+    public static final RegistryObject<Block> COSMIC_SANDSTONE = registerBlock("cosmic_sandstone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SANDSTONE).strength(1f)));
     public static final RegistryObject<Block> SILVERBLANC_STONE = registerBlock("silverblanc_stone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> MOSS_SILVERBLANC_STONE = registerBlock("moss_silverblanc_stone",

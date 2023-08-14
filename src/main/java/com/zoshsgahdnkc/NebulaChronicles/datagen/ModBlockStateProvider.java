@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.client.model.generators.ModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
@@ -34,7 +35,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ModBlocks.IRON_BRICKS_STAIRS,
 
             ModBlocks.TECH_TILE_WITH_SIGN,
-            ModBlocks.WALL_PAPER
+            ModBlocks.WALL_PAPER,
+
+            ModBlocks.COSMIC_SAND
     );
     private static final ImmutableSet<RegistryObject<Block>> DIRECTIONALS = ImmutableSet.of(
             ModBlocks.THICK_VAULT_STAIRS,
@@ -72,7 +75,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 simple(entry);
             }
         }
-
         blockWithItem(ModBlocks.TECH_TILE_WITH_SIGN, b -> horizontalBlock(b.get(), cubeAll(b.get())));
         multipleSimple(ModBlocks.IRON_COLLAGE, 3);
         multipleSimple(ModBlocks.BUNKER_BRICKS, 3);
@@ -82,6 +84,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT, b -> logBlock((RotatedPillarBlock) b.get()));
         blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT_UNLIT, b -> logBlock((RotatedPillarBlock) b.get()));
         blockWithItem(ModBlocks.IRON_BRICKS_STAIRS, b -> stairsBlock((StairBlock) b.get(), getRL("block/iron_bricks")));
+        blockWithItem(ModBlocks.COSMIC_SAND, this::simpleRotatedBlock);
         slab(ModBlocks.IRON_BRICKS_SLAB, getRL("block/iron_bricks_slab"), getRL("block/iron_bricks"));
         doorBlockWithRenderType((DoorBlock) ModBlocks.FORTRESS_DOOR.get(),
                 getRL("block/fortress_door_bottom"),
@@ -112,6 +115,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_1"));
     }
     // Generate blockstates for a block with multiple EXISTING models and weight for each
+    // used for moss silverblanc stone only
     protected void multipleExisting(RegistryObject<Block> block, int... weight) {
         ConfiguredModel[] models = new ConfiguredModel[weight.length];
         for (int i = 0; i < weight.length; i++) {
@@ -122,7 +126,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         itemModels().withExistingParent(name(block),
                 getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_1"));
     }
-    // randomly generated plant feature, white bud for instance
+    // randomly generated none-cross plant feature, white bud for instance
     protected void multipleExistingWithRotation(RegistryObject<Block> block, int count) {
         ConfiguredModel[] models = new ConfiguredModel[count * 4];
         for (int i = 0; i < count; i++) {
@@ -135,7 +139,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
         var builder = getVariantBuilder(block.get());
         builder.addModels(builder.partialState(), models);
     }
-
+    // generate surface block that has noise texture a randomly rotated blockstate
+    protected void simpleRotatedBlock(RegistryObject<Block> block) {
+        ModelFile model = cubeAll(block.get());
+        var builder = getVariantBuilder(block.get());
+        builder.addModels(builder.partialState(), generateRotationModels(model));
+    }
+    protected ConfiguredModel[] generateRotationModels(ModelFile file) {
+        ConfiguredModel[] models = new ConfiguredModel[4];
+        models[0] = new ConfiguredModel(file, 0, 0, false);
+        models[1] = new ConfiguredModel(file, 0, 90, false);
+        models[2] = new ConfiguredModel(file, 0, 180, false);
+        models[3] = new ConfiguredModel(file, 0, 270, false);
+        return models;
+    }
     protected void slab(RegistryObject<Block> block, ResourceLocation side, ResourceLocation end) {
         getVariantBuilder(block.get())
                 .partialState().with(SlabBlock.TYPE, SlabType.BOTTOM).addModels(new ConfiguredModel(models().slab(name(block), side, end, end)))

@@ -1,11 +1,12 @@
-// 1.20.1	2023-08-09T11:09:07.7553783	Block States: nch
+// 1.20.1	2023-08-14T18:18:51.72486	Block States: nch
 ea89adf252e5c890202a896169461df0b2fc1a12 assets/nch/blockstates/archeova_stone.json
 791b01c4ed47ae0a89cbbf4b890dad4a2870c482 assets/nch/blockstates/bunker_bricks.json
 724f744b19175264a3a1c05f27568cbf65d9426a assets/nch/blockstates/cargo_box.json
 08c809eba530763f11affac5b6205e736b3b70b9 assets/nch/blockstates/coarse_cactus_door.json
 cd44f80a8e205c57ca886cb40634c1aec8f9106e assets/nch/blockstates/coarse_cactus_planks.json
 ac025baa3c8cf421d4a587624e7145d477103c52 assets/nch/blockstates/coarse_cactus_trapdoor.json
-a6e674809c95018bcb67dc064ca1a671374ac1d5 assets/nch/blockstates/cosmic_sand.json
+0239974e5e36fc8d2fda58c4310d37f23525cc22 assets/nch/blockstates/cosmic_sand.json
+cde214bf968f72b1124b114d83eb65fa63d88ae6 assets/nch/blockstates/cosmic_sandstone.json
 6e872ab26fc924ef4beddd924cf7d737fb30f5e1 assets/nch/blockstates/cosmic_stone.json
 c9666d187ee0396466f227f8b33d2ab05948e41f assets/nch/blockstates/dark_matter_render_panel.json
 c600cfd7acd4f006a52b807ee78badb4f132c4d7 assets/nch/blockstates/dark_tile.json
@@ -60,6 +61,7 @@ ccdd895170f970810a131065f9dd5c2df4dff6eb assets/nch/models/block/coarse_cactus_t
 e5ab34364fbd019d46df8ff40a262f06e8c8dea1 assets/nch/models/block/coarse_cactus_trapdoor_open.json
 ee13ff204281c5f0c28fee2a214d9f2be58fbe67 assets/nch/models/block/coarse_cactus_trapdoor_top.json
 76c9199f51fb29e06b1805a601168c9ba640d265 assets/nch/models/block/cosmic_sand.json
+c5274082a3c3e5475ea061a02d9efe5792436341 assets/nch/models/block/cosmic_sandstone.json
 2ce6da6c16ac0d33efcf9eb126c4732ef1bb8496 assets/nch/models/block/cosmic_stone.json
 873d315db6716a1fa527b5ca5bd90f1f86ffeacc assets/nch/models/block/dark_tile.json
 445ca0f9fb9dd301e0dafd11cae0d1f8663ea909 assets/nch/models/block/deepspace_stone.json
@@ -111,6 +113,7 @@ aa4f3613d526f6aa64d0e05ad50a279af239e406 assets/nch/models/item/cargo_box.json
 5e9fced6cc2ea1fde09a02c7aecd33613a2803c8 assets/nch/models/item/coarse_cactus_planks.json
 9b5661fe0cbbb02c82b8f1d34fc38f34ee365cde assets/nch/models/item/coarse_cactus_trapdoor.json
 ff5ac123e79d6c6b1e7d5d85fbec47f186e21c55 assets/nch/models/item/cosmic_sand.json
+7b150132839f7be3df3f651e749cf317d431654a assets/nch/models/item/cosmic_sandstone.json
 062722f3fe86d355489ec13e6c563e1baf117e72 assets/nch/models/item/cosmic_stone.json
 e139d7e7cb012de9e71d3a40b85ebaa03ede4c21 assets/nch/models/item/dark_matter_render_panel.json
 2dae6b9331465f907b71dd88af90370adaff1a6e assets/nch/models/item/dark_tile.json

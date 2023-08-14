@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-09T11:09:07.759368	Loot Tables
+// 1.20.1	2023-08-14T18:18:51.7473857	Loot Tables
 b47f7d5a81ea8d2ca318632f87863280ba3a0cd2 data/nch/loot_tables/blocks/archeova_stone.json
 c3c366bad90dcbaea3d9305c0a4a3db67bb3e7cc data/nch/loot_tables/blocks/bunker_bricks.json
 8026915ffd16a7ff0d5ef7f66c3c6c92d7217fbc data/nch/loot_tables/blocks/cargo_box.json
@@ -6,6 +6,7 @@ c3c366bad90dcbaea3d9305c0a4a3db67bb3e7cc data/nch/loot_tables/blocks/bunker_bric
 9a5e44b0839b80610837e667e4be5e49c970d66c data/nch/loot_tables/blocks/coarse_cactus_planks.json
 db8ea91c08d98260d12d22ad1d1a24fcda11cc62 data/nch/loot_tables/blocks/coarse_cactus_trapdoor.json
 d92c47b0859bb440f169e62f78889550a8012db3 data/nch/loot_tables/blocks/cosmic_sand.json
+5eaa81361bcff24684d23b11ba61d5e15df37228 data/nch/loot_tables/blocks/cosmic_sandstone.json
 76af785fa445c2000d92047406c8fe74354fd6b6 data/nch/loot_tables/blocks/cosmic_stone.json
 3331212390908432791488c2cbe6ec05a560c405 data/nch/loot_tables/blocks/dark_matter_render_panel.json
 3af6dbeca703d8752ee0ff31f26b4a03450fe00d data/nch/loot_tables/blocks/dark_tile.json

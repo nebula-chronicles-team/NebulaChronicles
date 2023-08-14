@@ -100,6 +100,7 @@ public class ModCreativeModeTabs {
                 tab.accept(ModItems.LEMON.get());
                 tab.accept(ModBlocks.ARCHEOVA_STONE.get());
                 tab.accept(ModBlocks.COSMIC_SAND.get());
+                tab.accept(ModBlocks.COSMIC_SANDSTONE.get());
                 tab.accept(ModBlocks.COSMIC_STONE.get());
                 tab.accept(ModBlocks.DEEPSPACE_STONE.get());
                 tab.accept(ModBlocks.SILVERBLANC_STONE.get());
