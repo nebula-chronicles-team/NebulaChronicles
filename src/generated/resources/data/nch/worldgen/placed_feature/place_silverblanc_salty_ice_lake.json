@@ -1,15 +1,9 @@
 {
-  "feature": "nch:strange_fern",
+  "feature": "nch:silverblanc_salty_ice_lake",
   "placement": [
     {
-      "type": "minecraft:noise_threshold_count",
-      "above_noise": 10,
-      "below_noise": 2,
-      "noise_level": 1.0
-    },
-    {
       "type": "minecraft:rarity_filter",
-      "chance": 10
+      "chance": 3
     },
     {
       "type": "minecraft:in_square"

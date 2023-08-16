@@ -116,7 +116,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> SILVERBLANC_STONE_BRICKS = registerBlock("silverblanc_stone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get()).strength(1.5f)));
     public static final RegistryObject<Block> FROZEN_SOIL = registerBlock("frozen_soil",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).strength(1.2F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).strength(2F)));
     public static final RegistryObject<Block> MOSS_FROZEN_SOIL = registerBlock("moss_frozen_soil",
             () -> new Block(BlockBehaviour.Properties.copy(FROZEN_SOIL.get())));
     public static final RegistryObject<Block> SALTY_ICE = registerBlock("salty_ice",

@@ -1,5 +1,5 @@
 {
-  "temperature": 0.2,
+  "temperature": 0.25,
   "downfall": 0,
   "has_precipitation": false,
   "effects": {
@@ -52,6 +52,7 @@
       "minecraft:spring_lava"
     ],
     [
+      "nch:place_cave_amethyst",
       "minecraft:glow_lichen"
     ],
     [

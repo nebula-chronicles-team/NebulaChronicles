@@ -8,7 +8,7 @@
           "to_place": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "nch:strange_fern"
+              "Name": "minecraft:amethyst_block"
             }
           }
         }
@@ -23,7 +23,7 @@
         }
       ]
     },
-    "tries": 12,
+    "tries": 96,
     "xz_spread": 7,
     "y_spread": 3
   }

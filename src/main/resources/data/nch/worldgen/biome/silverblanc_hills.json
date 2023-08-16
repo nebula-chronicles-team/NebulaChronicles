@@ -1,5 +1,5 @@
 {
-  "temperature": 0.2,
+  "temperature": 0.25,
   "downfall": 0.1,
   "has_precipitation": true,
   "effects": {

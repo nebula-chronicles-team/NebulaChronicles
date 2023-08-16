@@ -383,7 +383,8 @@
             "nch:silverblanc_plateau",
             "nch:silverblanc_hills",
             "nch:silverblanc_lowland",
-            "nch:silverblanc_desert"
+            "nch:silverblanc_desert",
+            "nch:salty_marsh"
           ]
         },
         "then_run": {
@@ -434,8 +435,8 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "nch:salty_marsh",
-                  "nch:silverblanc_lowland"
+                  "nch:silverblanc_lowland",
+                  "nch:salty_marsh"
                 ]
               },
               "then_run": {
