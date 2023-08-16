@@ -5,7 +5,6 @@ import com.zoshsgahdnkc.NebulaChronicles.registries.*;
 import com.zoshsgahdnkc.NebulaChronicles.block.entity.ModBlockEntities;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -26,7 +25,7 @@ public class NebulaChronicles {
         ModBlocks.register(modEventBus);
         ModSounds.SOUND_EVENT.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
-        ModCreativeModeTabs.TABS.register(modEventBus);
+        ModTabs.TABS.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);

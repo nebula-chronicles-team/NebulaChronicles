@@ -25,7 +25,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
             ModBlocks.IRON_COLLAGE,
             ModBlocks.BUNKER_BRICKS,
+            ModBlocks.FROZEN_SOIL,
             ModBlocks.MOSS_SILVERBLANC_STONE,
+            ModBlocks.MOSS_FROZEN_SOIL,
             ModBlocks.WHITE_BUD,
 
             ModBlocks.FORTRESS_WALL,
@@ -46,7 +48,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ModBlocks.NICKELSTEEL_PLASTIC_CONTAINER
     );
     private static final ImmutableSet<RegistryObject<Block>> CROSS = ImmutableSet.of(
-            ModBlocks.STRANGE_FERN
+            ModBlocks.STRANGE_FERN,
+            ModBlocks.BLUE_KODOKU_FLOWER,
+            ModBlocks.PURPLE_KODOKU_FLOWER,
+            ModBlocks.WHITE_KODOKU_FLOWER
     );
     private static final ImmutableSet<RegistryObject<Block>> CUSTOMS = ImmutableSet.of(
             ModBlocks.CARGO_BOX,
@@ -78,7 +83,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.TECH_TILE_WITH_SIGN, b -> horizontalBlock(b.get(), cubeAll(b.get())));
         multipleSimple(ModBlocks.IRON_COLLAGE, 3);
         multipleSimple(ModBlocks.BUNKER_BRICKS, 3);
-        multipleExisting(ModBlocks.MOSS_SILVERBLANC_STONE, 20, 12, 2, 20, 1);
+        multipleSimple(ModBlocks.FROZEN_SOIL, 2);
+        multipleExistingWithWeight(ModBlocks.MOSS_SILVERBLANC_STONE, 20, 12, 2, 20, 1);
+        multipleExistingWithWeight(ModBlocks.MOSS_FROZEN_SOIL, 20, 12, 2, 20, 1, 20, 12, 2, 20, 1);
         multipleExistingWithRotation(ModBlocks.WHITE_BUD, 2);
         blockWithItem(ModBlocks.FORTRESS_WALL, b -> simpleBlock(b.get(), models().cubeColumn(name(b), getRL("block/fortress_wall"), getRL("block/fortress_wall_top"))));
         blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT, b -> logBlock((RotatedPillarBlock) b.get()));
@@ -115,8 +122,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_1"));
     }
     // Generate blockstates for a block with multiple EXISTING models and weight for each
-    // used for moss silverblanc stone only
-    protected void multipleExisting(RegistryObject<Block> block, int... weight) {
+    // used for silverblanc moss blocks only
+    protected void multipleExistingWithWeight(RegistryObject<Block> block, int... weight) {
         ConfiguredModel[] models = new ConfiguredModel[weight.length];
         for (int i = 0; i < weight.length; i++) {
             models[i] = new ConfiguredModel(models().getExistingFile(getRL(ModelProvider.BLOCK_FOLDER + "/" + name(block) + "_" + (i+1))), 0, 0, false, weight[i]);

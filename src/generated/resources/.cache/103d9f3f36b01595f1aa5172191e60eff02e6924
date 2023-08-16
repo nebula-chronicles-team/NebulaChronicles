@@ -1,3 +1,9 @@
-// 1.20.1	2023-08-14T20:01:29.6247494	Registries
-689e033da07c83949bf3309456bf0a8c46ec5c1b data/nch/worldgen/configured_feature/strange_fern.json
-2fe6ec6032a7cef8085bc0625b3c68b408193791 data/nch/worldgen/placed_feature/place_strange_fern.json
+// 1.20.1	2023-08-16T19:43:20.3393318	Registries
+17052d703a62ecede14c7a3a8b9abfca5e268297 data/nch/worldgen/configured_feature/silverblanc_flower.json
+2954208201fd26ebb8b59679ea9ca5d33003a031 data/nch/worldgen/configured_feature/strange_fern.json
+c0eec6513bc333ad988946ebf2fb681c9650d671 data/nch/worldgen/configured_feature/white_bud.json
+37f4d31169c03f2597e757fc1b569d8c8e912252 data/nch/worldgen/configured_feature/white_kodoku_flower.json
+a52f55ed2cefb3a332dd82503bcf92bde65c0028 data/nch/worldgen/placed_feature/place_silverblanc_flower.json
+c342d129c6cccca6c400e74ab5b61592939e1363 data/nch/worldgen/placed_feature/place_strange_fern.json
+7824b36e6159e6fccb0bfb4d0da551b401717101 data/nch/worldgen/placed_feature/place_white_bud.json
+0cff520b3d8312de507b3079be9b691c5879961c data/nch/worldgen/placed_feature/place_white_kodoku_flower.json

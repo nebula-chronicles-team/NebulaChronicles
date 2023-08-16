@@ -1,11 +1,11 @@
 {
-  "feature": "nch:strange_fern",
+  "feature": "nch:white_bud",
   "placement": [
     {
       "type": "minecraft:noise_threshold_count",
       "above_noise": 10,
-      "below_noise": 2,
-      "noise_level": 1.0
+      "below_noise": 5,
+      "noise_level": 0.4
     },
     {
       "type": "minecraft:in_square"

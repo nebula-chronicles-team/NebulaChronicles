@@ -31,6 +31,8 @@
     "nch:tech_tile",
     "nch:tech_tile_with_sign",
     "nch:thick_vault_stairs",
-    "nch:ultralloy_block"
+    "nch:ultralloy_block",
+    "nch:cosmic_sandstone",
+    "nch:salty_ice"
   ]
 }

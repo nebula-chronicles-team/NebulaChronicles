@@ -3,6 +3,7 @@ package com.zoshsgahdnkc.NebulaChronicles.registries;
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import com.zoshsgahdnkc.NebulaChronicles.block.*;
 import com.zoshsgahdnkc.NebulaChronicles.block.ModNyliumBlock;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -114,6 +115,18 @@ public class ModBlocks {
             () -> new BushBlock( BlockBehaviour.Properties.copy(Blocks.GRASS)));
     public static final RegistryObject<Block> SILVERBLANC_STONE_BRICKS = registerBlock("silverblanc_stone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get()).strength(1.5f)));
+    public static final RegistryObject<Block> FROZEN_SOIL = registerBlock("frozen_soil",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).strength(1.2F)));
+    public static final RegistryObject<Block> MOSS_FROZEN_SOIL = registerBlock("moss_frozen_soil",
+            () -> new Block(BlockBehaviour.Properties.copy(FROZEN_SOIL.get())));
+    public static final RegistryObject<Block> SALTY_ICE = registerBlock("salty_ice",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.PACKED_ICE)));
+    public static final RegistryObject<Block> BLUE_KODOKU_FLOWER = registerBlock("blue_kodoku_flower",
+            () -> new FlowerBlock(() -> MobEffects.DIG_SLOWDOWN, 12, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> PURPLE_KODOKU_FLOWER = registerBlock("purple_kodoku_flower",
+            () -> new FlowerBlock(() -> MobEffects.DIG_SLOWDOWN, 12, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> WHITE_KODOKU_FLOWER = registerBlock("white_kodoku_flower",
+            () -> new FlowerBlock(() -> MobEffects.DIG_SPEED, 12, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }

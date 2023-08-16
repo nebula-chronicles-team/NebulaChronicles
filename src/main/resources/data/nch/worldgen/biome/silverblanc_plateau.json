@@ -1,6 +1,6 @@
 {
-  "temperature": 0.8,
-  "downfall": 0.4,
+  "temperature": 0.2,
+  "downfall": 0.1,
   "has_precipitation": true,
   "effects": {
     "sky_color": 7907327,
@@ -45,8 +45,11 @@
     [],
     [],
     [
-      "nch:place_strange_fern",
-      "minecraft:glow_lichen"
+      "minecraft:glow_lichen",
+      "nch:place_white_bud",
+      "nch:place_silverblanc_flower",
+      "nch:place_white_kodoku_flower",
+      "nch:place_strange_fern"
     ],
     []
   ]

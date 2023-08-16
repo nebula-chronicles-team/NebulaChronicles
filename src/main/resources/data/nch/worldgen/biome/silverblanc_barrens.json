@@ -1,23 +1,19 @@
 {
   "temperature": 0.2,
-  "downfall": 0,
-  "has_precipitation": false,
+  "downfall": 0.1,
+  "has_precipitation": true,
   "effects": {
     "sky_color": 7907327,
     "fog_color": 12638463,
-    "water_color": 4159204,
-    "water_fog_color": 329011,
+    "water_color": 8185086,
+    "water_fog_color": 2124168,
+    "grass_color": 4191135,
+    "foliage_color": 3144081,
     "mood_sound": {
       "sound": "minecraft:ambient.cave",
       "tick_delay": 6000,
       "block_search_extent": 8,
       "offset": 2
-    },
-    "music": {
-      "sound": "minecraft:music.overworld.dripstone_caves",
-      "min_delay": 12000,
-      "max_delay": 24000,
-      "replace_current_music": false
     }
   },
   "spawners": {
@@ -47,15 +43,10 @@
     [],
     [],
     [],
-    [
-      "minecraft:spring_water",
-      "minecraft:spring_lava"
-    ],
+    [],
     [
       "minecraft:glow_lichen"
     ],
-    [
-      "minecraft:freeze_top_layer"
-    ]
+    []
   ]
 }
