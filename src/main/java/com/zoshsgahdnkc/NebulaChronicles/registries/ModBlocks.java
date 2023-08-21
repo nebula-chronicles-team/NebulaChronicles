@@ -115,6 +115,12 @@ public class ModBlocks {
             () -> new BushBlock( BlockBehaviour.Properties.copy(Blocks.GRASS)));
     public static final RegistryObject<Block> SILVERBLANC_STONE_BRICKS = registerBlock("silverblanc_stone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get()).strength(1.5f)));
+    public static final RegistryObject<Block> SILVERBLANC_STONE_BRICKS_STAIRS = registerBlock("silverblanc_stone_bricks_stairs",
+            () -> new StairBlock(SILVERBLANC_STONE_BRICKS.get()::defaultBlockState, BlockBehaviour.Properties.copy(SILVERBLANC_STONE_BRICKS.get())));
+    public static final RegistryObject<Block> SILVERBLANC_STONE_BRICKS_SLAB = registerBlock("silverblanc_stone_bricks_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(SILVERBLANC_STONE_BRICKS.get())));
+    public static final RegistryObject<Block> SILVERBLANC_STONE_BRICKS_WALL = registerBlock("silverblanc_stone_bricks_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(SILVERBLANC_STONE_BRICKS.get())));
     public static final RegistryObject<Block> FROZEN_SOIL = registerBlock("frozen_soil",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).strength(2F)));
     public static final RegistryObject<Block> MOSS_FROZEN_SOIL = registerBlock("moss_frozen_soil",

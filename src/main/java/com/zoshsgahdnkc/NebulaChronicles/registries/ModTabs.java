@@ -110,6 +110,9 @@ public class ModTabs {
                 accept(tab, ModBlocks.SILVERBLANC_STONE);
                 accept(tab, ModBlocks.MOSS_SILVERBLANC_STONE);
                 accept(tab, ModBlocks.SILVERBLANC_STONE_BRICKS);
+                accept(tab, ModBlocks.SILVERBLANC_STONE_BRICKS_SLAB);
+                accept(tab, ModBlocks.SILVERBLANC_STONE_BRICKS_STAIRS);
+                accept(tab, ModBlocks.SILVERBLANC_STONE_BRICKS_WALL);
                 accept(tab, ModBlocks.WHITE_BUD);
                 accept(tab, ModBlocks.STRANGE_FERN);
                 accept(tab, ModBlocks.BLUE_KODOKU_FLOWER);

@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-16T19:23:19.5128468	Loot Tables
+// 1.20.1	2023-08-21T11:44:08.0804019	Loot Tables
 b47f7d5a81ea8d2ca318632f87863280ba3a0cd2 data/nch/loot_tables/blocks/archeova_stone.json
 fad25934b764f1e5c00cf082b3b39b8a0d3d11df data/nch/loot_tables/blocks/blue_kodoku_flower.json
 c3c366bad90dcbaea3d9305c0a4a3db67bb3e7cc data/nch/loot_tables/blocks/bunker_bricks.json
@@ -38,6 +38,9 @@ d3fad7d805d1e7cf2f17da7dd7c2f96b0debcf74 data/nch/loot_tables/blocks/purple_kodo
 b3ebbe0d9800e34592385cbe66af0ac223f6ea64 data/nch/loot_tables/blocks/salty_ice.json
 640f47b21ae71c4746e4c8a18ad20dbd5d403d21 data/nch/loot_tables/blocks/silverblanc_stone.json
 782aef7ebec5ae7444aa19b26d35ad3a3c3ffd7e data/nch/loot_tables/blocks/silverblanc_stone_bricks.json
+e94ab79381fd932bd63f264e40120a2ea9c56a3d data/nch/loot_tables/blocks/silverblanc_stone_bricks_slab.json
+f8a41b422abad8632c41b96e03158f0561609aac data/nch/loot_tables/blocks/silverblanc_stone_bricks_stairs.json
+9950f9509133dc71a8d302edd777a7e2f2f12fad data/nch/loot_tables/blocks/silverblanc_stone_bricks_wall.json
 04002049f7e8e60b3e38a3691d0a8007d8a3aef4 data/nch/loot_tables/blocks/simple_vault_stairs.json
 a9b4eb97f74ac318555ef16934c3e801cc5879fa data/nch/loot_tables/blocks/solar_panel.json
 12013e1789df6bc1bb301769195c714aa8e861d7 data/nch/loot_tables/blocks/strange_fern.json
