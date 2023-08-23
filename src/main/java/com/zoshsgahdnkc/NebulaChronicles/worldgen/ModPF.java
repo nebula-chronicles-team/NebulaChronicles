@@ -7,7 +7,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -22,6 +21,12 @@ public class ModPF {
     public static final ResourceKey<PlacedFeature> PLACE_WHITE_KODOKU_FLOWER = createKey("place_white_kodoku_flower");
     public static final ResourceKey<PlacedFeature> PLACE_CAVE_AMETHYST = createKey("place_cave_amethyst");
     public static final ResourceKey<PlacedFeature> PLACE_SB_SALTY_ICE_LAKE = createKey("place_silverblanc_salty_ice_lake");
+    public static final ResourceKey<PlacedFeature> PLACE_DISK_FROZEN_SOIL = createKey("place_disk_frozen_soil");
+    public static final ResourceKey<PlacedFeature> SB_ORE_FROZEN_SOIL = createKey("sb_ore_frozen_soil");
+    public static final ResourceKey<PlacedFeature> SB_ORE_DIORITE = createKey("sb_ore_diorite");
+    public static final ResourceKey<PlacedFeature> SB_ORE_COSMIC_SAND = createKey("sb_ore_cosmic_sand");
+    public static final ResourceKey<PlacedFeature> SB_ORE_CALCITE = createKey("sb_ore_calcite");
+    public static final ResourceKey<PlacedFeature> SB_ORE_DEEPSLATE = createKey("sb_ore_deepslate");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> features = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -39,11 +44,29 @@ public class ModPF {
                 NoiseThresholdCountPlacement.of(-0.8, 15, 4), RarityFilter.onAverageOnceEvery(4), InSquarePlacement.spread(),
                 HeightmapPlacement.onHeightmap(Heightmap.Types.MOTION_BLOCKING), BiomeFilter.biome());
         register(context, PLACE_CAVE_AMETHYST, features.getOrThrow(ModCF.AMETHYST),
-                CountPlacement.of(UniformInt.of(100, 165)), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(0), VerticalAnchor.absolute(85)),
-                InSquarePlacement.spread(), SurfaceRelativeThresholdFilter.of(Heightmap.Types.OCEAN_FLOOR_WG, 0, -13), BiomeFilter.biome());
-        register(context,  PLACE_SB_SALTY_ICE_LAKE, features.getOrThrow(ModCF.SILVERBLANC_SALTY_ICE_LAKE),
+                NoiseBasedCountPlacement.of(80, 0D, 0.34D), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(0), VerticalAnchor.absolute(64)),
+                InSquarePlacement.spread(), BiomeFilter.biome());
+        register(context, PLACE_SB_SALTY_ICE_LAKE, features.getOrThrow(ModCF.SILVERBLANC_SALTY_ICE_LAKE),
                 RarityFilter.onAverageOnceEvery(3), InSquarePlacement.spread(),
                 HeightmapPlacement.onHeightmap(Heightmap.Types.WORLD_SURFACE_WG), BiomeFilter.biome());
+        register(context, PLACE_DISK_FROZEN_SOIL, features.getOrThrow(ModCF.DISK_FROZEN_SOIL),
+                InSquarePlacement.spread(), HeightmapPlacement.onHeightmap(Heightmap.Types.OCEAN_FLOOR_WG),
+                BiomeFilter.biome(), RarityFilter.onAverageOnceEvery(2));
+        register(context, SB_ORE_FROZEN_SOIL, features.getOrThrow(ModCF.ORE_FROZEN_SOIL),
+                CountPlacement.of(2), InSquarePlacement.spread(), BiomeFilter.biome(),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(-16), VerticalAnchor.absolute(64)));
+        register(context, SB_ORE_COSMIC_SAND, features.getOrThrow(ModCF.ORE_COSMIC_SAND),
+                CountPlacement.of(2), InSquarePlacement.spread(), BiomeFilter.biome(),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(-16), VerticalAnchor.absolute(64)));
+        register(context, SB_ORE_DIORITE, features.getOrThrow(ModCF.ORE_DIORITE),
+                CountPlacement.of(2), InSquarePlacement.spread(), BiomeFilter.biome(),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(-48), VerticalAnchor.absolute(64)));
+        register(context, SB_ORE_CALCITE, features.getOrThrow(ModCF.ORE_CALCITE),
+                CountPlacement.of(2), InSquarePlacement.spread(), BiomeFilter.biome(),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(-48), VerticalAnchor.absolute(64)));
+        register(context, SB_ORE_DEEPSLATE, features.getOrThrow(ModCF.ORE_DEEPSLATE),
+                CountPlacement.of(2), InSquarePlacement.spread(), BiomeFilter.biome(),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(-48), VerticalAnchor.absolute(0)));
     }
     protected static ResourceKey<PlacedFeature> createKey(String key) {
         return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(NebulaChronicles.MODID, key));

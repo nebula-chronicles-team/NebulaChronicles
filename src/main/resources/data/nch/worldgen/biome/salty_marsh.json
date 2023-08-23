@@ -44,7 +44,9 @@
     [],
     [],
     [],
-    [],
+    [
+      "nch:place_disk_frozen_soil"
+    ],
     [],
     [
       "minecraft:glow_lichen",

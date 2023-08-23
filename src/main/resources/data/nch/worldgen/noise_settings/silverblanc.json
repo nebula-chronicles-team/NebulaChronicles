@@ -53,13 +53,7 @@
       "shift_z": "minecraft:shift_z"
     },
     "continents": "minecraft:overworld/continents",
-    "erosion": {
-      "type": "minecraft:squeeze",
-      "argument": {
-        "type": "minecraft:quarter_negative",
-        "argument": "minecraft:overworld/erosion"
-      }
-    },
+    "erosion": "nch:high_erosion",
     "depth": {
       "type": "minecraft:min",
       "argument1": {
@@ -151,14 +145,14 @@
         "type": "minecraft:squeeze",
         "argument": {
           "type": "minecraft:mul",
-          "argument1": 0.64,
+          "argument1": 0.7,
           "argument2": {
             "type": "minecraft:interpolated",
             "argument": {
               "type": "minecraft:blend_density",
               "argument": {
                 "type": "minecraft:add",
-                "argument1": 0.1171875,
+                "argument1": 0.145,
                 "argument2": {
                   "type": "minecraft:mul",
                   "argument1": {
@@ -166,21 +160,21 @@
                     "from_y": -48,
                     "to_y": -40,
                     "from_value": 0,
-                    "to_value": 1
+                    "to_value": 0.96
                   },
                   "argument2": {
                     "type": "minecraft:add",
-                    "argument1": -0.15,
+                    "argument1": -0.14,
                     "argument2": {
                       "type": "minecraft:add",
-                      "argument1": -0.078125,
+                      "argument1": -0.076,
                       "argument2": {
                         "type": "minecraft:mul",
                         "argument1": {
                           "type": "minecraft:y_clamped_gradient",
                           "from_y": -48,
                           "to_y": 180,
-                          "from_value": 0.4,
+                          "from_value": 0.45,
                           "to_value": 1.25
                         },
                         "argument2": {
@@ -530,7 +524,7 @@
             "absolute": 0
           },
           "false_at_and_above": {
-            "absolute": 9
+            "absolute": 5
           }
         },
         "then_run": {

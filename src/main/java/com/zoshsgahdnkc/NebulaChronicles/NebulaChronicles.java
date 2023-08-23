@@ -26,6 +26,7 @@ public class NebulaChronicles {
         ModSounds.SOUND_EVENT.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModTabs.TABS.register(modEventBus);
+        ModFeatures.FEATURES.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);

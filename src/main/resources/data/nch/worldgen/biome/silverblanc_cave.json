@@ -45,7 +45,13 @@
     [],
     [],
     [],
-    [],
+    [
+      "nch:sb_ore_frozen_soil",
+      "nch:sb_ore_calcite",
+      "nch:sb_ore_diorite",
+      "nch:sb_ore_cosmic_sand",
+      "nch:sb_ore_deepslate"
+    ],
     [],
     [
       "minecraft:spring_water",
