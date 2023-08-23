@@ -45,7 +45,18 @@
     [],
     [],
     [
-      "nch:place_disk_frozen_soil"
+      "nch:place_disk_frozen_soil",
+      "nch:sb_ore_frozen_soil",
+      "nch:sb_ore_calcite",
+      "nch:sb_ore_diorite",
+      "nch:sb_ore_cosmic_sand",
+      "nch:sb_ore_copper",
+      "nch:sb_ore_copper_large",
+      "nch:sb_ore_iron",
+      "nch:sb_ore_iron_upper",
+      "nch:sb_ore_nickel",
+      "nch:sb_ore_gold",
+      "nch:sb_ore_gold_large"
     ],
     [],
     [

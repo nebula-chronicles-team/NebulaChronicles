@@ -13,7 +13,7 @@
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
-          "tag": "nch:ore_replaceable"
+          "tag": "nch:base_stone"
         }
       }
     ]

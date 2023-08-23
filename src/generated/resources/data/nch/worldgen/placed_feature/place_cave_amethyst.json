@@ -4,8 +4,8 @@
     {
       "type": "minecraft:noise_based_count",
       "noise_factor": 0.0,
-      "noise_offset": 0.27,
-      "noise_to_count_ratio": 64
+      "noise_offset": 0.34,
+      "noise_to_count_ratio": 80
     },
     {
       "type": "minecraft:height_range",

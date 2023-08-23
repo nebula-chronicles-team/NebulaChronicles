@@ -140,8 +140,26 @@
             "continentalness": 0,
             "erosion": 0,
             "weirdness": 0,
-            "depth": 1.7,
+            "depth": 1.34,
             "offset": 0
+          }
+        },
+        {
+          "biome": "nch:frost_cave",
+          "parameters": {
+            "temperature": [
+              -0.18,
+              0.14
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": -0.1,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 1.34,
+            "offset": 0.55
           }
         }
       ]

@@ -7,7 +7,8 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 
 public class ModBlockTags {
-    public static final TagKey<Block> ORE_REPLACEABLE = create("ore_replaceable");
+    public static final TagKey<Block> BASE_STONE = create("base_stone");
+    public static final TagKey<Block> SB_ORE_REPLACEABLE = create("sb_ore_replaceable");
     private static TagKey<Block> create(String name) {
         return BlockTags.create(new ResourceLocation(NebulaChronicles.MODID, name));
     }

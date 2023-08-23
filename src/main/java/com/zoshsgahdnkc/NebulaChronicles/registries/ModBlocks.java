@@ -85,6 +85,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> ORGANIC_PLASTIC_BLOCK = registerBlock("organic_plastic_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(2f,4f)));
+    public static final RegistryObject<Block> NICKEL_ORE = registerBlock("nickel_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+    public static final RegistryObject<Block> DEEPSLATE_NICKEL_ORE = registerBlock("deepslate_nickel_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_IRON_ORE)));
     public static final RegistryObject<Block> ARCHEOVA_STONE = registerBlock("archeova_stone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).strength(6f,7f)));
     public static final RegistryObject<Block> COSMIC_STONE = registerBlock("cosmic_stone",
@@ -97,9 +101,23 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SANDSTONE).strength(1f)));
     public static final RegistryObject<Block> SILVERBLANC_STONE = registerBlock("silverblanc_stone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SILVERBLANC_STONE_SLAB = registerBlock("silverblanc_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get())));
+    public static final RegistryObject<Block> SILVERBLANC_COPPER_ORE = registerBlock("silverblanc_copper_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get()).strength(2F)));
+    public static final RegistryObject<Block> SILVERBLANC_IRON_ORE = registerBlock("silverblanc_iron_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(SILVERBLANC_COPPER_ORE.get())));
+    public static final RegistryObject<Block> SILVERBLANC_GOLD_ORE = registerBlock("silverblanc_gold_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(SILVERBLANC_COPPER_ORE.get())));
+    public static final RegistryObject<Block> SILVERBLANC_NICKEL_ORE = registerBlock("silverblanc_nickel_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(SILVERBLANC_COPPER_ORE.get())));
+    public static final RegistryObject<Block> SILVERBLANC_LAPIS_ORE = registerBlock("silverblanc_lapis_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(SILVERBLANC_COPPER_ORE.get())));
+    public static final RegistryObject<Block> SILVERBLANC_DIAMOND_ORE = registerBlock("silverblanc_diamond_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(SILVERBLANC_COPPER_ORE.get())));
     public static final RegistryObject<Block> MOSS_SILVERBLANC_STONE = registerBlock("moss_silverblanc_stone",
             () -> new ModNyliumBlock(BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get()).sound(SoundType.NYLIUM).randomTicks(), SILVERBLANC_STONE));
-   public static final RegistryObject<Block> SOLAR_PANEL = registerBlock("solar_panel",
+    public static final RegistryObject<Block> SOLAR_PANEL = registerBlock("solar_panel",
            () -> new EnergyPlate(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> REDSTONE_POWER_PANEL = registerBlock("redstone_power_panel",
             () -> new EnergyPlate(2, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
