@@ -35,6 +35,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ModBlocks.FORTRESS_WALL_LIGHT_UNLIT,
             ModBlocks.IRON_BRICKS_SLAB,
             ModBlocks.SILVERBLANC_STONE_SLAB,
+            ModBlocks.SILVERBLANC_STONE_STAIRS,
+            ModBlocks.SILVERBLANC_STONE_WALL,
             ModBlocks.IRON_BRICKS_STAIRS,
             ModBlocks.SILVERBLANC_STONE_BRICKS_STAIRS,
             ModBlocks.SILVERBLANC_STONE_BRICKS_SLAB,
@@ -96,10 +98,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT_UNLIT, b -> logBlock((RotatedPillarBlock) b.get()));
         blockWithItem(ModBlocks.IRON_BRICKS_STAIRS, b -> stairsBlock((StairBlock) b.get(), getRL(blockSlashName(ModBlocks.IRON_BRICKS))));
         blockWithItem(ModBlocks.SILVERBLANC_STONE_BRICKS_STAIRS, b -> stairsBlock((StairBlock) b.get(), getRL(blockSlashName(ModBlocks.SILVERBLANC_STONE_BRICKS))));
+        blockWithItem(ModBlocks.SILVERBLANC_STONE_STAIRS, b -> stairsBlock((StairBlock) b.get(), getRL(blockSlashName(ModBlocks.SILVERBLANC_STONE))));
         blockWithItem(ModBlocks.COSMIC_SAND, this::simpleRotatedBlock);
         blockWithItem(ModBlocks.SILVERBLANC_STONE_BRICKS_SLAB, b -> slabBlock((SlabBlock) b.get(), getRL(blockSlashName(ModBlocks.SILVERBLANC_STONE_BRICKS)), getRL(blockSlashName(ModBlocks.SILVERBLANC_STONE_BRICKS))));
         blockWithItem(ModBlocks.SILVERBLANC_STONE_SLAB, b -> slabBlock((SlabBlock) b.get(), getRL(blockSlashName(ModBlocks.SILVERBLANC_STONE)), getRL(blockSlashName(ModBlocks.SILVERBLANC_STONE))));
         wall(ModBlocks.SILVERBLANC_STONE_BRICKS_WALL, getRL(blockSlashName(ModBlocks.SILVERBLANC_STONE_BRICKS)));
+        wall(ModBlocks.SILVERBLANC_STONE_WALL, getRL(blockSlashName(ModBlocks.SILVERBLANC_STONE)));
         slab(ModBlocks.IRON_BRICKS_SLAB, getRL(blockSlashName(ModBlocks.IRON_BRICKS_SLAB)), getRL(blockSlashName(ModBlocks.IRON_BRICKS_SLAB)));
         doorBlockWithRenderType((DoorBlock) ModBlocks.FORTRESS_DOOR.get(),
                 getRL("block/fortress_door_bottom"),

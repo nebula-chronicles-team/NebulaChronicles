@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-23T17:22:29.921859	Block States: nch
+// 1.20.1	2023-08-24T17:58:16.2709132	Block States: nch
 ea89adf252e5c890202a896169461df0b2fc1a12 assets/nch/blockstates/archeova_stone.json
 27a09f0c38c6fa92bb5f17bf80c0d2c3b0be5fdb assets/nch/blockstates/blue_kodoku_flower.json
 791b01c4ed47ae0a89cbbf4b890dad4a2870c482 assets/nch/blockstates/bunker_bricks.json
@@ -50,6 +50,8 @@ d7ab3d8fef6a7d1444e614870c2b2f6afeb1880e assets/nch/blockstates/silverblanc_ston
 099496c09fe73531c04cc99eaa02d55adfa3fc4a assets/nch/blockstates/silverblanc_stone_bricks_stairs.json
 da9f00bdad1c3785c93bcd7bf54a7fd7272ef90a assets/nch/blockstates/silverblanc_stone_bricks_wall.json
 cd2a2d362393d057635991d9e56ba607d47153c5 assets/nch/blockstates/silverblanc_stone_slab.json
+151b8f760fdcd1842eed9c38e680a51440ba3859 assets/nch/blockstates/silverblanc_stone_stairs.json
+675db2bf5927a9ca9537fb3a279fdef89e5b248a assets/nch/blockstates/silverblanc_stone_wall.json
 7559c6a54b611db19d23005e8d68cd75a0e3d1d4 assets/nch/blockstates/simple_vault_stairs.json
 268393af334bd9730637c6a391d40202042b6f2e assets/nch/blockstates/solar_panel.json
 84eeebe7a4e3a456178ccf834a763913d42add90 assets/nch/blockstates/strange_fern.json
@@ -139,6 +141,12 @@ c3265f97591872a110e318f342573575490a003e assets/nch/models/block/silverblanc_sto
 db326f58421a03feca9cdacc164547a5d4370ec6 assets/nch/models/block/silverblanc_stone_bricks_wall_side_tall.json
 c8a1daad4e0d3bc513c2aff1d82b1f6dacc78654 assets/nch/models/block/silverblanc_stone_slab.json
 d59b597e99feea7368c7e389af455517c63ea529 assets/nch/models/block/silverblanc_stone_slab_top.json
+3e402422116beaa42ed9533a6da09fe18f187638 assets/nch/models/block/silverblanc_stone_stairs.json
+b99e4b81548d5ec7d2f1ea90b6bf97ee85705b4c assets/nch/models/block/silverblanc_stone_stairs_inner.json
+557f2dca334c43589ab8fcaa3116989e1edc7d81 assets/nch/models/block/silverblanc_stone_stairs_outer.json
+72ca0ee6ce89a192e9e3c3a4e68921e0b77d6e88 assets/nch/models/block/silverblanc_stone_wall_post.json
+6656d7e80acfa649020ae0cc1f7f3a52920d1bbc assets/nch/models/block/silverblanc_stone_wall_side.json
+a75bbd1b360a86b868078cea7369a6ed4798a9b3 assets/nch/models/block/silverblanc_stone_wall_side_tall.json
 ab50c58f1bc83cefe0d73c5a32e5b8ecd2ffb08b assets/nch/models/block/strange_fern.json
 218c84ed750c1dfed18fcf16ba2a23ad2b52f520 assets/nch/models/block/tech_tile.json
 99f18069d798267a3dd3f027255c41676c4757eb assets/nch/models/block/tech_tile_with_sign.json
@@ -198,6 +206,8 @@ b254131d98484a7a5681494f119d49977d19b31a assets/nch/models/item/silverblanc_ston
 8665fb187f47b6d644d29c6e228f2b33251e4745 assets/nch/models/item/silverblanc_stone_bricks_stairs.json
 0d76fd5725823fe19b96932d9c9cbb60590ce181 assets/nch/models/item/silverblanc_stone_bricks_wall.json
 4c84e3dcb7472a11e015c1a96b7d68bf11584609 assets/nch/models/item/silverblanc_stone_slab.json
+124dea001ff77603c838786b588e1aa47789074a assets/nch/models/item/silverblanc_stone_stairs.json
+2ad5a8637c2e7671d89ef62adc4a5e29a6b50f5b assets/nch/models/item/silverblanc_stone_wall.json
 4191d3860d86a3c0131b94164a9cec582577efd5 assets/nch/models/item/simple_vault_stairs.json
 fba908be7ae6e9f5a777f8fe9fe25685dd677f58 assets/nch/models/item/solar_panel.json
 feed4167209b92aec1ed3ceddf7d9b838bbc0ced assets/nch/models/item/strange_fern.json

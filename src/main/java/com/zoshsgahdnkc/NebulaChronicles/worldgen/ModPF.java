@@ -65,10 +65,10 @@ public class ModPF {
                 NoiseBasedCountPlacement.of(80, 0D, 0.34D), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(0), VerticalAnchor.absolute(64)),
                 InSquarePlacement.spread(), BiomeFilter.biome());
         register(context, PLACE_SILVERBLANC_STONE_SLAB, features.getOrThrow(ModCF.SILVERBLANC_STONE_SLAB),
-                CountPlacement.of(256), HeightRangePlacement.uniform(VerticalAnchor.absolute(4), VerticalAnchor.aboveBottom(64)),
+                CountPlacement.of(256), HeightRangePlacement.uniform(VerticalAnchor.absolute(-7), VerticalAnchor.absolute(30)),
                 InSquarePlacement.spread(), BiomeFilter.biome());
         register(context, PLACE_STONE_SLAB, features.getOrThrow(ModCF.STONE_SLAB),
-                CountPlacement.of(256), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(0), VerticalAnchor.absolute(0)),
+                CountPlacement.of(256), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(0), VerticalAnchor.absolute(-13)),
                 InSquarePlacement.spread(), BiomeFilter.biome());
         register(context, PLACE_SB_SALTY_ICE_LAKE, features.getOrThrow(ModCF.SILVERBLANC_SALTY_ICE_LAKE),
                 RarityFilter.onAverageOnceEvery(3), InSquarePlacement.spread(),

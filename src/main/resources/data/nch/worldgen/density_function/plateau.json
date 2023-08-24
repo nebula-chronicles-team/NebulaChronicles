@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "minecraft:add",
+    "argument1": {
+      "type": "minecraft:y_clamped_gradient",
+      "from_y": 35,
+      "to_y": 150,
+      "from_value": 1.5,
+      "to_value": -1.5
+    },
+    "argument2": 1.5
+  },
+  "argument2": "minecraft:overworld_large_biomes/offset"
+}

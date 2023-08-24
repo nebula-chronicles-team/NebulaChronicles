@@ -103,6 +103,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> SILVERBLANC_STONE_SLAB = registerBlock("silverblanc_stone_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get())));
+    public static final RegistryObject<Block> SILVERBLANC_STONE_STAIRS = registerBlock("silverblanc_stone_stairs",
+            () -> new StairBlock(SILVERBLANC_STONE.get()::defaultBlockState, BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get())));
+    public static final RegistryObject<Block> SILVERBLANC_STONE_WALL = registerBlock("silverblanc_stone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get())));
     public static final RegistryObject<Block> SILVERBLANC_COPPER_ORE = registerBlock("silverblanc_copper_ore",
             () -> new Block(BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get()).strength(2F)));
     public static final RegistryObject<Block> SILVERBLANC_IRON_ORE = registerBlock("silverblanc_iron_ore",

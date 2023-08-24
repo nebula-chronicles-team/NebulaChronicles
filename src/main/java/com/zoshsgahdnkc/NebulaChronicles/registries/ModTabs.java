@@ -109,6 +109,8 @@ public class ModTabs {
                 accept(tab, ModBlocks.MOSS_FROZEN_SOIL);
                 accept(tab, ModBlocks.SILVERBLANC_STONE);
                 accept(tab, ModBlocks.SILVERBLANC_STONE_SLAB);
+                accept(tab, ModBlocks.SILVERBLANC_STONE_STAIRS);
+                accept(tab, ModBlocks.SILVERBLANC_STONE_WALL);
                 accept(tab, ModBlocks.MOSS_SILVERBLANC_STONE);
                 accept(tab, ModBlocks.SILVERBLANC_STONE_BRICKS);
                 accept(tab, ModBlocks.SILVERBLANC_STONE_BRICKS_SLAB);

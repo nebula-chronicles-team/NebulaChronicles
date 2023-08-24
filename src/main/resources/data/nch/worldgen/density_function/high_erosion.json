@@ -3,12 +3,8 @@
   "argument": {
     "type": "minecraft:squeeze",
     "argument": {
-      "type": "minecraft:add",
-      "argument1": 0.07,
-      "argument2": {
-        "type": "minecraft:quarter_negative",
-        "argument": "minecraft:overworld/erosion"
-      }
+      "type": "minecraft:quarter_negative",
+      "argument": "minecraft:overworld/erosion"
     }
   }
 }

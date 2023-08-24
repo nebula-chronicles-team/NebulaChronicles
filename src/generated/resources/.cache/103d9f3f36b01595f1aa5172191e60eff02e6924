@@ -1,6 +1,6 @@
-// 1.20.1	2023-08-23T20:12:55.6246287	Registries
+// 1.20.1	2023-08-24T20:44:41.0031501	Registries
 2f3aa594ca20f0e6a147447c864d6cbf2e5ab553 data/nch/worldgen/configured_feature/amethyst.json
-aba56df4ae0a58a4143d17c542f57523e7421974 data/nch/worldgen/configured_feature/disk_frozen_soil.json
+9fb0114f3d93e02a1ade4280e7a3b1c53211cf9c data/nch/worldgen/configured_feature/disk_frozen_soil.json
 99073308072ff4674e674bee75453f5918591613 data/nch/worldgen/configured_feature/ore_calcite.json
 bc67c5cc4777453d6e0c758adf524a81dc857363 data/nch/worldgen/configured_feature/ore_copper_large.json
 0d73297eb832cec066aa6d3c5d3e3c93c3fa6660 data/nch/worldgen/configured_feature/ore_copper_small.json
@@ -29,8 +29,8 @@ bbbab29657949ba2791feca4d7b244347cf675a0 data/nch/worldgen/placed_feature/place_
 51fd249ce04b73f051da51968f39fc4d40ddf478 data/nch/worldgen/placed_feature/place_disk_frozen_soil.json
 a52f55ed2cefb3a332dd82503bcf92bde65c0028 data/nch/worldgen/placed_feature/place_silverblanc_flower.json
 e5611850682f4b3dd49be17fe5f84711a7c20436 data/nch/worldgen/placed_feature/place_silverblanc_salty_ice_lake.json
-4b102faa0f3207778bf519249e02f8a5332999d9 data/nch/worldgen/placed_feature/place_silverblanc_stone_slab.json
-0b4195e5ff41075add50b80dab39b4569b310163 data/nch/worldgen/placed_feature/place_stone_slab.json
+e0f239e11bf9421702ea08bfd9d0663017cff323 data/nch/worldgen/placed_feature/place_silverblanc_stone_slab.json
+5830f4449eae995d6c6f640dc8913af89128686c data/nch/worldgen/placed_feature/place_stone_slab.json
 72570602559650f16e5441673b5da1aa2447a873 data/nch/worldgen/placed_feature/place_strange_fern.json
 7824b36e6159e6fccb0bfb4d0da551b401717101 data/nch/worldgen/placed_feature/place_white_bud.json
 0cff520b3d8312de507b3079be9b691c5879961c data/nch/worldgen/placed_feature/place_white_kodoku_flower.json

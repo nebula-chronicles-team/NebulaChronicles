@@ -15,6 +15,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
@@ -73,7 +74,7 @@ public class ModCF {
         register(context, SILVERBLANC_SALTY_ICE_LAKE, Feature.LAKE, new LakeFeature.Configuration(BlockStateProvider.simple(ModBlocks.SALTY_ICE.get()), BlockStateProvider.simple(ModBlocks.SILVERBLANC_STONE.get())));
         register(context, DISK_FROZEN_SOIL, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.FROZEN_SOIL.get()),
                 BlockPredicate.matchesBlocks(ModBlocks.FROZEN_SOIL.get(), ModBlocks.MOSS_FROZEN_SOIL.get()),
-                ConstantInt.of(3), 1));
+                UniformInt.of(3, 5), 1));
         register(context, ORE_DEEPSLATE, Feature.ORE, new OreConfiguration(new TagMatchTest(ModBlockTags.BASE_STONE),
                 Blocks.DEEPSLATE.defaultBlockState(), 32));
         register(context, ORE_FROZEN_SOIL, Feature.ORE, new OreConfiguration(new TagMatchTest(ModBlockTags.BASE_STONE),
