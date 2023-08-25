@@ -126,6 +126,7 @@ public class ModTabs {
                 accept(tab, ModBlocks.SILVERBLANC_DIAMOND_ORE);
                 accept(tab, ModBlocks.WHITE_BUD);
                 accept(tab, ModBlocks.STRANGE_FERN);
+                accept(tab, ModBlocks.COARSE_CACTUS);
                 accept(tab, ModBlocks.BLUE_KODOKU_FLOWER);
                 accept(tab, ModBlocks.PURPLE_KODOKU_FLOWER);
                 accept(tab, ModBlocks.WHITE_KODOKU_FLOWER);

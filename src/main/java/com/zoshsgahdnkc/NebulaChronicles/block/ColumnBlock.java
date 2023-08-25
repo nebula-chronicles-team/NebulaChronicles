@@ -2,6 +2,8 @@ package com.zoshsgahdnkc.NebulaChronicles.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -30,13 +32,17 @@ public class ColumnBlock extends Block {
     }
 
     @Override
+    public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource randomSource) {
+        boolean flag1 = false;
+        boolean flag2 = false;
+        if (!level.getBlockState(pos.above()).is(this)) flag1 = true;
+        if (!level.getBlockState(pos.below()).is(this)) flag2 = true;
+        level.setBlock(pos, state.setValue(UP, !flag1).setValue(DOWN, !flag2), 3);
+    }
+
+    @Override
     public BlockState updateShape(BlockState state, Direction direction, BlockState state1, LevelAccessor levelAccessor, BlockPos pos, BlockPos pos1) {
-        if (state1.is(this)) {
-            switch (direction) {
-                case UP -> levelAccessor.setBlock(pos, state.setValue(UP, true), 3);
-                case DOWN -> levelAccessor.setBlock(pos, state.setValue(DOWN, true), 3);
-            }
-        }
+        levelAccessor.scheduleTick(pos, this, 1);
         return super.updateShape(state, direction, state1, levelAccessor, pos, pos1);
     }
 

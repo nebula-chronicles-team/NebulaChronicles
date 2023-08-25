@@ -155,6 +155,8 @@ public class ModBlocks {
             () -> new FlowerBlock(() -> MobEffects.DIG_SLOWDOWN, 12, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> WHITE_KODOKU_FLOWER = registerBlock("white_kodoku_flower",
             () -> new FlowerBlock(() -> MobEffects.DIG_SPEED, 12, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> COARSE_CACTUS = registerBlock("coarse_cactus",
+            () -> new CoarseCactusBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }

@@ -1,7 +1,8 @@
-// 1.20.1	2023-08-05T00:48:49.8075393	Item Models: nch
+// 1.20.1	2023-08-25T21:10:45.3091108	Item Models: nch
 6d1d415fa845640c1fb1a21b73c2aa583a01eaed assets/nch/models/item/battery_waste.json
 0e7f7daec937f2266fefeed41b5d7cb44c01f052 assets/nch/models/item/calcite_casing.json
 1cbbf479cf2b1f54277147154ab5f329845d77a9 assets/nch/models/item/coal_dust.json
+10fc3b5d6a9623bbc8ed483ca8b7ba8118cddf9e assets/nch/models/item/coarse_cactus.json
 8f2053b4fad21208830e09d36afd3067410934b5 assets/nch/models/item/coarse_cactus_door.json
 b34b4877160ca395e92f524a50e565232685a5cb assets/nch/models/item/copper_coil.json
 cee56f6f2b5208039c7d3ab185259cb27f9f60c0 assets/nch/models/item/cpu.json

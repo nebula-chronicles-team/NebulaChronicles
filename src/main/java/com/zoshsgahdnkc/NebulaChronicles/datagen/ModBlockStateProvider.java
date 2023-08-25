@@ -2,6 +2,7 @@ package com.zoshsgahdnkc.NebulaChronicles.datagen;
 
 import com.google.common.collect.ImmutableSet;
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
+import com.zoshsgahdnkc.NebulaChronicles.block.CoarseCactusBlock;
 import com.zoshsgahdnkc.NebulaChronicles.block.ColumnBlock;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModBlocks;
 import net.minecraft.data.PackOutput;
@@ -29,6 +30,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ModBlocks.MOSS_SILVERBLANC_STONE,
             ModBlocks.MOSS_FROZEN_SOIL,
             ModBlocks.WHITE_BUD,
+            ModBlocks.COARSE_CACTUS,
 
             ModBlocks.FORTRESS_WALL,
             ModBlocks.FORTRESS_WALL_LIGHT,
@@ -93,6 +95,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         multipleExistingWithWeight(ModBlocks.MOSS_SILVERBLANC_STONE, 20, 12, 2, 20, 1);
         multipleExistingWithWeight(ModBlocks.MOSS_FROZEN_SOIL, 20, 12, 2, 20, 1, 20, 12, 2, 20, 1);
         multipleExistingWithRotation(ModBlocks.WHITE_BUD, 2);
+        coarseCactus();
         blockWithItem(ModBlocks.FORTRESS_WALL, b -> simpleBlock(b.get(), models().cubeColumn(name(b), getRL("block/fortress_wall"), getRL("block/fortress_wall_top"))));
         blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT, b -> logBlock((RotatedPillarBlock) b.get()));
         blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT_UNLIT, b -> logBlock((RotatedPillarBlock) b.get()));
@@ -157,6 +160,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         }
         var builder = getVariantBuilder(block.get());
         builder.addModels(builder.partialState(), models);
+    }
+    protected void coarseCactus() {
+        RegistryObject<Block> block = ModBlocks.COARSE_CACTUS;
+        ConfiguredModel[] models = new ConfiguredModel[24];
+        for (int i = 0; i < 6; i++) {
+            var file = models().getExistingFile(getRL(blockSlashName(block) + "_" + (i+1)));
+            models[i * 4] = new ConfiguredModel(file, 0, 0, false);
+            models[i * 4 + 1] = new ConfiguredModel(file, 0, 90, false);
+            models[i * 4 + 2] = new ConfiguredModel(file, 0, 180, false);
+            models[i * 4 + 3] = new ConfiguredModel(file, 0, 270, false);
+        }
+        ConfiguredModel top = new ConfiguredModel(models().getExistingFile(getRL(blockSlashName(block) + "_top")));
+        var builder = getVariantBuilder(block.get());
+        builder.addModels(builder.partialState().with(CoarseCactusBlock.TOP, false), models)
+                .addModels(builder.partialState().with(CoarseCactusBlock.TOP, true), top);
     }
     // generate surface block that has noise texture a randomly rotated blockstate
     protected void simpleRotatedBlock(RegistryObject<Block> block) {

@@ -34,6 +34,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         blockWithTexture(ModBlocks.TACHYON_PROJECTION_PANEL);
         blockWithTexture(ModBlocks.DARK_MATTER_RENDER_PANEL);
         blockWithTexture(ModBlocks.WHITE_BUD);
+        blockWithTexture(ModBlocks.COARSE_CACTUS);
     }
 
     private ItemModelBuilder blockWithTexture(RegistryObject<Block> block) {
