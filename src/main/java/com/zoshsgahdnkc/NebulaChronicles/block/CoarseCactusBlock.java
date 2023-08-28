@@ -53,9 +53,10 @@ public class CoarseCactusBlock extends Block {
     @Override
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource randomSource) {
         if (!level.isAreaLoaded(pos, 1)) return;
-//        if (!level.getBlockState(pos.above()).is(this)) level.setBlock(pos, this.defaultBlockState().setValue(TOP, true), 3);
         if (!state.canSurvive(level, pos)) {
             level.destroyBlock(pos, true);
+        } else if (!level.getBlockState(pos.above()).is(this)) {
+            level.setBlock(pos, this.defaultBlockState().setValue(TOP, true), 3);
         }
     }
     @Override
@@ -63,6 +64,7 @@ public class CoarseCactusBlock extends Block {
         if (!state.canSurvive(levelAccessor, pos)) {
             levelAccessor.scheduleTick(pos, this, 1);
         }
+        if (!levelAccessor.getBlockState(pos.above()).is(this)) levelAccessor.setBlock(pos, this.defaultBlockState().setValue(TOP, true), 3);
 
         return super.updateShape(state, direction, state1, levelAccessor, pos, pos1);
     }
@@ -82,7 +84,8 @@ public class CoarseCactusBlock extends Block {
     @Override
     public boolean canSurvive(BlockState state, LevelReader levelReader, BlockPos pos) {
         BlockState below = levelReader.getBlockState(pos.below());
-        return isCoarseCactusSustainable(below) && !levelReader.getBlockState(pos.above()).liquid();
+        BlockState above = levelReader.getBlockState(pos.above());
+        return isCoarseCactusSustainable(below) && !above.liquid();
     }
 
     @Override

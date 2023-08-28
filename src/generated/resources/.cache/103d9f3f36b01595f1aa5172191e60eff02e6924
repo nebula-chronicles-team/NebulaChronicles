@@ -1,5 +1,6 @@
-// 1.20.1	2023-08-24T20:44:41.0031501	Registries
+// 1.20.1	2023-08-28T23:07:13.8247107	Registries
 2f3aa594ca20f0e6a147447c864d6cbf2e5ab553 data/nch/worldgen/configured_feature/amethyst.json
+68a2d056c4c00c72cc77184a5e5c5a97b00d9036 data/nch/worldgen/configured_feature/coarse_cactus.json
 9fb0114f3d93e02a1ade4280e7a3b1c53211cf9c data/nch/worldgen/configured_feature/disk_frozen_soil.json
 99073308072ff4674e674bee75453f5918591613 data/nch/worldgen/configured_feature/ore_calcite.json
 bc67c5cc4777453d6e0c758adf524a81dc857363 data/nch/worldgen/configured_feature/ore_copper_large.json
@@ -25,6 +26,7 @@ a10d92c85246210708c3e2da9e6f34e1595ae040 data/nch/worldgen/configured_feature/st
 689e033da07c83949bf3309456bf0a8c46ec5c1b data/nch/worldgen/configured_feature/strange_fern.json
 f9e72d470c9b1c73bdefb455283a4f2b444e59c1 data/nch/worldgen/configured_feature/white_bud.json
 37f4d31169c03f2597e757fc1b569d8c8e912252 data/nch/worldgen/configured_feature/white_kodoku_flower.json
+af024a2d07097af342d0610db9df4cbf7abfb73f data/nch/worldgen/placed_feature/coarse_cactus.json
 bbbab29657949ba2791feca4d7b244347cf675a0 data/nch/worldgen/placed_feature/place_cave_amethyst.json
 51fd249ce04b73f051da51968f39fc4d40ddf478 data/nch/worldgen/placed_feature/place_disk_frozen_soil.json
 a52f55ed2cefb3a332dd82503bcf92bde65c0028 data/nch/worldgen/placed_feature/place_silverblanc_flower.json

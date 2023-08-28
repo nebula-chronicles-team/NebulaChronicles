@@ -1,11 +1,13 @@
 package com.zoshsgahdnkc.NebulaChronicles.worldgen;
 
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
+import com.zoshsgahdnkc.NebulaChronicles.block.CoarseCactusBlock;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModBlocks;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModFeatures;
 import com.zoshsgahdnkc.NebulaChronicles.utils.ModBlockTags;
 import com.zoshsgahdnkc.NebulaChronicles.worldgen.feature.StoneSlabFeature;
 import com.zoshsgahdnkc.NebulaChronicles.worldgen.feature.configurations.SimpleReplacementConfiguration;
+import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.features.FeatureUtils;
@@ -15,11 +17,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.util.valueproviders.WeightedListInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.predicate.BlockStatePredicate;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -28,6 +33,7 @@ import net.minecraft.world.level.levelgen.feature.LakeFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedBlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.stateproviders.SimpleStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
@@ -63,6 +69,7 @@ public class ModCF {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_LAPIS = createKey("ore_lapis");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SILVERBLANC_STONE_SLAB = createKey("silverblanc_stone_slab");
     public static final ResourceKey<ConfiguredFeature<?, ?>> STONE_SLAB = createKey("stone_slab");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COARSE_CACTUS = createKey("coarse_cactus");
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         register(context, STRANGE_FERN, Feature.RANDOM_PATCH, grassPatch(ModBlocks.STRANGE_FERN.get(), 12));
         register(context, WHITE_BUD, Feature.RANDOM_PATCH, grassPatch(ModBlocks.WHITE_BUD.get(), 24));
@@ -104,6 +111,10 @@ public class ModCF {
         register(context, ORE_DIAMOND_SMALL, Feature.ORE, new OreConfiguration(OreMatch.DIAMOND_LIST, 4));
         register(context, ORE_DIAMOND_LARGE, Feature.ORE, new OreConfiguration(OreMatch.DIAMOND_LIST, 10, 0.3F));
         register(context, ORE_LAPIS, Feature.ORE, new OreConfiguration(OreMatch.LAPIS_LIST, 7, 0.4F));
+        register(context, COARSE_CACTUS, Feature.BLOCK_COLUMN, new BlockColumnConfiguration(List.of(
+                new BlockColumnConfiguration.Layer(UniformInt.of(1, 5), BlockStateProvider.simple(ModBlocks.COARSE_CACTUS.get().defaultBlockState().setValue(CoarseCactusBlock.TOP, false))),
+                new BlockColumnConfiguration.Layer(ConstantInt.of(1), BlockStateProvider.simple(ModBlocks.COARSE_CACTUS.get().defaultBlockState().setValue(CoarseCactusBlock.TOP, true)))
+        ), Direction.UP, BlockPredicate.ONLY_IN_AIR_PREDICATE, true));
     }
     protected static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(
             BootstapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> resourceKey,

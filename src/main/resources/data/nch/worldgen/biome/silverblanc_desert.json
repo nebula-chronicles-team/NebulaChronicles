@@ -55,7 +55,8 @@
     [],
     [
       "minecraft:glow_lichen",
-      "minecraft:patch_dead_bush_2"
+      "minecraft:patch_dead_bush_2",
+      "nch:coarse_cactus"
     ],
     [
       "minecraft:freeze_top_layer"

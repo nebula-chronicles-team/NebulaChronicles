@@ -45,6 +45,7 @@ public class ModPF {
     public static final ResourceKey<PlacedFeature> SB_ORE_DIAMOND_LARGE = createKey("sb_ore_diamond_large");
     public static final ResourceKey<PlacedFeature> SB_ORE_DIAMOND = createKey("sb_ore_diamond");
     public static final ResourceKey<PlacedFeature> SB_ORE_LAPIS = createKey("sb_ore_lapis");
+    public static final ResourceKey<PlacedFeature> COARSE_CACTUS = createKey("coarse_cactus");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> features = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -59,6 +60,9 @@ public class ModPF {
                 NoiseThresholdCountPlacement.of(-0.8, 15, 4), RarityFilter.onAverageOnceEvery(4), InSquarePlacement.spread(),
                 HeightmapPlacement.onHeightmap(Heightmap.Types.MOTION_BLOCKING), BiomeFilter.biome());
         register(context, PLACE_WHITE_KODOKU_FLOWER, features.getOrThrow(ModCF.WHITE_KODOKU_FLOWER),
+                NoiseThresholdCountPlacement.of(-0.8, 15, 4), RarityFilter.onAverageOnceEvery(4), InSquarePlacement.spread(),
+                HeightmapPlacement.onHeightmap(Heightmap.Types.MOTION_BLOCKING), BiomeFilter.biome());
+        register(context, COARSE_CACTUS, features.getOrThrow(ModCF.COARSE_CACTUS),
                 NoiseThresholdCountPlacement.of(-0.8, 15, 4), RarityFilter.onAverageOnceEvery(4), InSquarePlacement.spread(),
                 HeightmapPlacement.onHeightmap(Heightmap.Types.MOTION_BLOCKING), BiomeFilter.biome());
         register(context, PLACE_CAVE_AMETHYST, features.getOrThrow(ModCF.AMETHYST),
@@ -76,6 +80,7 @@ public class ModPF {
         register(context, PLACE_DISK_FROZEN_SOIL, features.getOrThrow(ModCF.DISK_FROZEN_SOIL),
                 InSquarePlacement.spread(), HeightmapPlacement.onHeightmap(Heightmap.Types.OCEAN_FLOOR_WG),
                 BiomeFilter.biome(), RarityFilter.onAverageOnceEvery(2));
+
         register(context, SB_ORE_FROZEN_SOIL, features.getOrThrow(ModCF.ORE_FROZEN_SOIL),
                 CountPlacement.of(1), InSquarePlacement.spread(), BiomeFilter.biome(),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(-16), VerticalAnchor.absolute(64)));
