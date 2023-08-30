@@ -2,7 +2,7 @@ package com.zoshsgahdnkc.NebulaChronicles.registries;
 
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import com.zoshsgahdnkc.NebulaChronicles.block.*;
-import com.zoshsgahdnkc.NebulaChronicles.block.ModNyliumBlock;
+import com.zoshsgahdnkc.NebulaChronicles.block.SilverblancMossBlock;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -120,7 +120,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> SILVERBLANC_DIAMOND_ORE = registerBlock("silverblanc_diamond_ore",
             () -> new Block(BlockBehaviour.Properties.copy(SILVERBLANC_COPPER_ORE.get())));
     public static final RegistryObject<Block> MOSS_SILVERBLANC_STONE = registerBlock("moss_silverblanc_stone",
-            () -> new ModNyliumBlock(BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get()).sound(SoundType.NYLIUM).randomTicks(), SILVERBLANC_STONE));
+            () -> new SilverblancMossBlock(BlockBehaviour.Properties.copy(SILVERBLANC_STONE.get()).sound(SoundType.NYLIUM).randomTicks(), SILVERBLANC_STONE));
     public static final RegistryObject<Block> SOLAR_PANEL = registerBlock("solar_panel",
            () -> new EnergyPlate(1, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> REDSTONE_POWER_PANEL = registerBlock("redstone_power_panel",
@@ -146,7 +146,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> FROZEN_SOIL = registerBlock("frozen_soil",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).strength(2F)));
     public static final RegistryObject<Block> MOSS_FROZEN_SOIL = registerBlock("moss_frozen_soil",
-            () -> new Block(BlockBehaviour.Properties.copy(FROZEN_SOIL.get())));
+            () -> new SilverblancMossBlock(BlockBehaviour.Properties.copy(FROZEN_SOIL.get()), FROZEN_SOIL));
     public static final RegistryObject<Block> SALTY_ICE = registerBlock("salty_ice",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.PACKED_ICE)));
     public static final RegistryObject<Block> BLUE_KODOKU_FLOWER = registerBlock("blue_kodoku_flower",
