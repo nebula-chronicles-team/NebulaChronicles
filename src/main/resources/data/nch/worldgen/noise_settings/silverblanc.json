@@ -34,15 +34,7 @@
       "y_scale": 0.7142857142857143
     },
     "lava": 0,
-    "temperature": {
-      "type": "minecraft:shifted_noise",
-      "noise": "minecraft:temperature",
-      "xz_scale": 0.25,
-      "y_scale": 0,
-      "shift_x": "minecraft:shift_x",
-      "shift_y": 0,
-      "shift_z": "minecraft:shift_z"
-    },
+    "temperature": 0,
     "vegetation": {
       "type": "minecraft:shifted_noise",
       "noise": "minecraft:vegetation",
@@ -52,32 +44,9 @@
       "shift_y": 0,
       "shift_z": "minecraft:shift_z"
     },
-    "continents": "minecraft:overworld/continents",
-    "erosion": "nch:high_erosion",
-    "depth": {
-      "type": "minecraft:min",
-      "argument1": {
-        "type": "minecraft:mul",
-        "argument1": 3,
-        "argument2": {
-          "type": "minecraft:cube",
-          "argument": {
-            "type": "minecraft:add",
-            "argument1": "minecraft:overworld/depth",
-            "argument2": 0.2
-          }
-        }
-      },
-      "argument2": {
-        "type": "minecraft:add",
-        "argument1": {
-          "type": "minecraft:mul",
-          "argument1": 0.45,
-          "argument2": "minecraft:overworld/depth"
-        },
-        "argument2": 0.55
-      }
-    },
+    "continents": "nch:sb_jaggedness",
+    "erosion": "nch:sb_chaos",
+    "depth": "nch:sb_density",
     "ridges": 0,
     "initial_density_without_jaggedness": {
       "type": "minecraft:add",
@@ -125,14 +94,7 @@
                       "argument1": 4,
                       "argument2": {
                         "type": "minecraft:quarter_negative",
-                        "argument": {
-                          "type": "minecraft:mul",
-                          "argument1": "minecraft:overworld/depth",
-                          "argument2": {
-                            "type": "minecraft:cache_2d",
-                            "argument": "minecraft:overworld/factor"
-                          }
-                        }
+                        "argument": "nch:sb_density"
                       }
                     }
                   },
@@ -146,136 +108,129 @@
       }
     },
     "final_density": {
-      "type": "minecraft:add",
+      "type": "minecraft:min",
       "argument1": {
-        "type": "minecraft:min",
-        "argument1": {
-          "type": "minecraft:squeeze",
-          "argument": {
-            "type": "minecraft:mul",
-            "argument1": 0.7,
-            "argument2": {
-              "type": "minecraft:interpolated",
+        "type": "minecraft:squeeze",
+        "argument": {
+          "type": "minecraft:mul",
+          "argument1": 0.64,
+          "argument2": {
+            "type": "minecraft:interpolated",
+            "argument": {
+              "type": "minecraft:blend_density",
               "argument": {
-                "type": "minecraft:blend_density",
-                "argument": {
-                  "type": "minecraft:add",
-                  "argument1": 0.145,
+                "type": "minecraft:add",
+                "argument1": 0.1171875,
+                "argument2": {
+                  "type": "minecraft:mul",
+                  "argument1": {
+                    "type": "minecraft:y_clamped_gradient",
+                    "from_y": -48,
+                    "to_y": -16,
+                    "from_value": 0,
+                    "to_value": 1.1
+                  },
                   "argument2": {
-                    "type": "minecraft:mul",
-                    "argument1": {
-                      "type": "minecraft:y_clamped_gradient",
-                      "from_y": -48,
-                      "to_y": -39,
-                      "from_value": 0,
-                      "to_value": 0.94
-                    },
+                    "type": "minecraft:add",
+                    "argument1": -0.1171875,
                     "argument2": {
                       "type": "minecraft:add",
-                      "argument1": -0.14,
+                      "argument1": -0.078125,
                       "argument2": {
-                        "type": "minecraft:add",
-                        "argument1": -0.076,
+                        "type": "minecraft:mul",
+                        "argument1": {
+                          "type": "minecraft:y_clamped_gradient",
+                          "from_y": 240,
+                          "to_y": 256,
+                          "from_value": 1,
+                          "to_value": 0
+                        },
                         "argument2": {
-                          "type": "minecraft:mul",
-                          "argument1": {
-                            "type": "minecraft:y_clamped_gradient",
-                            "from_y": -48,
-                            "to_y": 180,
-                            "from_value": 0.6,
-                            "to_value": 0
-                          },
+                          "type": "minecraft:add",
+                          "argument1": 0.078125,
                           "argument2": {
-                            "type": "minecraft:add",
-                            "argument1": 0.1,
-                            "argument2": {
-                              "type": "minecraft:range_choice",
-                              "input": "minecraft:overworld/sloped_cheese",
-                              "min_inclusive": -1000000,
-                              "max_exclusive": 1.62,
-                              "when_in_range": {
+                            "type": "minecraft:range_choice",
+                            "input": "nch:sb_density",
+                            "min_inclusive": -1000000,
+                            "max_exclusive": 1.5625,
+                            "when_in_range": {
+                              "type": "minecraft:min",
+                              "argument1": "nch:sb_density",
+                              "argument2": {
+                                "type": "minecraft:mul",
+                                "argument1": 5,
+                                "argument2": "minecraft:overworld/caves/entrances"
+                              }
+                            },
+                            "when_out_of_range": {
+                              "type": "minecraft:max",
+                              "argument1": {
                                 "type": "minecraft:min",
                                 "argument1": {
                                   "type": "minecraft:min",
-                                  "argument1": "minecraft:overworld/sloped_cheese",
-                                  "argument2": "nch:plateau"
-                                },
-                                "argument2": {
-                                  "type": "minecraft:mul",
-                                  "argument1": 5,
-                                  "argument2": "minecraft:overworld/caves/entrances"
-                                }
-                              },
-                              "when_out_of_range": {
-                                "type": "minecraft:max",
-                                "argument1": {
-                                  "type": "minecraft:min",
                                   "argument1": {
-                                    "type": "minecraft:min",
+                                    "type": "minecraft:add",
                                     "argument1": {
-                                      "type": "minecraft:add",
-                                      "argument1": {
-                                        "type": "minecraft:mul",
-                                        "argument1": 4,
-                                        "argument2": {
-                                          "type": "minecraft:square",
-                                          "argument": {
-                                            "type": "minecraft:noise",
-                                            "noise": "minecraft:cave_layer",
-                                            "xz_scale": 1,
-                                            "y_scale": 8
-                                          }
-                                        }
-                                      },
+                                      "type": "minecraft:mul",
+                                      "argument1": 4,
                                       "argument2": {
-                                        "type": "minecraft:add",
-                                        "argument1": {
-                                          "type": "minecraft:clamp",
-                                          "input": {
-                                            "type": "minecraft:add",
-                                            "argument1": 0.27,
-                                            "argument2": {
-                                              "type": "minecraft:noise",
-                                              "noise": "minecraft:cave_cheese",
-                                              "xz_scale": 1,
-                                              "y_scale": 0.6666666666666666
-                                            }
-                                          },
-                                          "min": -1,
-                                          "max": 1
-                                        },
-                                        "argument2": {
-                                          "type": "minecraft:clamp",
-                                          "input": {
-                                            "type": "minecraft:add",
-                                            "argument1": 1.5,
-                                            "argument2": {
-                                              "type": "minecraft:mul",
-                                              "argument1": -0.64,
-                                              "argument2": "minecraft:overworld/sloped_cheese"
-                                            }
-                                          },
-                                          "min": 0,
-                                          "max": 0.5
+                                        "type": "minecraft:square",
+                                        "argument": {
+                                          "type": "minecraft:noise",
+                                          "noise": "minecraft:cave_layer",
+                                          "xz_scale": 0.9,
+                                          "y_scale": 7
                                         }
                                       }
                                     },
-                                    "argument2": "minecraft:overworld/caves/entrances"
+                                    "argument2": {
+                                      "type": "minecraft:add",
+                                      "argument1": {
+                                        "type": "minecraft:clamp",
+                                        "input": {
+                                          "type": "minecraft:add",
+                                          "argument1": 0.22,
+                                          "argument2": {
+                                            "type": "minecraft:noise",
+                                            "noise": "minecraft:cave_cheese",
+                                            "xz_scale": 0.8,
+                                            "y_scale": 0.6
+                                          }
+                                        },
+                                        "min": -1,
+                                        "max": 1
+                                      },
+                                      "argument2": {
+                                        "type": "minecraft:clamp",
+                                        "input": {
+                                          "type": "minecraft:add",
+                                          "argument1": 1.5,
+                                          "argument2": {
+                                            "type": "minecraft:mul",
+                                            "argument1": -0.64,
+                                            "argument2": "nch:sb_density"
+                                          }
+                                        },
+                                        "min": 0,
+                                        "max": 0.5
+                                      }
+                                    }
                                   },
-                                  "argument2": {
-                                    "type": "minecraft:add",
-                                    "argument1": "minecraft:overworld/caves/spaghetti_2d",
-                                    "argument2": "minecraft:overworld/caves/spaghetti_roughness_function"
-                                  }
+                                  "argument2": "minecraft:overworld/caves/entrances"
                                 },
                                 "argument2": {
-                                  "type": "minecraft:range_choice",
-                                  "input": "minecraft:overworld/caves/pillars",
-                                  "min_inclusive": -1000000,
-                                  "max_exclusive": 0.005,
-                                  "when_in_range": -1000000,
-                                  "when_out_of_range": "minecraft:overworld/caves/pillars"
+                                  "type": "minecraft:add",
+                                  "argument1": "minecraft:overworld/caves/spaghetti_2d",
+                                  "argument2": "minecraft:overworld/caves/spaghetti_roughness_function"
                                 }
+                              },
+                              "argument2": {
+                                "type": "minecraft:range_choice",
+                                "input": "minecraft:overworld/caves/pillars",
+                                "min_inclusive": -1000000,
+                                "max_exclusive": 0,
+                                "when_in_range": -1000000,
+                                "when_out_of_range": "minecraft:overworld/caves/pillars"
                               }
                             }
                           }
@@ -287,36 +242,9 @@
               }
             }
           }
-        },
-        "argument2": {
-          "type": "minecraft:add",
-          "argument1": {
-            "type": "minecraft:y_clamped_gradient",
-            "from_y": -48,
-            "to_y": -42,
-            "from_value": 0.7,
-            "to_value": 0
-          },
-          "argument2": {
-            "type": "minecraft:add",
-            "argument1": {
-              "type": "minecraft:y_clamped_gradient",
-              "from_y": -6,
-              "to_y": 5,
-              "from_value": 0.0005,
-              "to_value": 0.0006
-            },
-            "argument2": "minecraft:overworld/caves/noodle"
-          }
         }
       },
-      "argument2": {
-        "type": "minecraft:y_clamped_gradient",
-        "from_y": -6,
-        "to_y": 5,
-        "from_value": 0.00055,
-        "to_value": 0.007
-      }
+      "argument2": "minecraft:overworld/caves/noodle"
     },
     "vein_toggle": 0,
     "vein_ridged": 0,
@@ -681,3 +609,4 @@
     ]
   }
 }
+

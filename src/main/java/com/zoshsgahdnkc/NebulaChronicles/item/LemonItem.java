@@ -1,5 +1,7 @@
 package com.zoshsgahdnkc.NebulaChronicles.item;
 
+import com.zoshsgahdnkc.NebulaChronicles.planet.PlanetUtils;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -14,6 +16,8 @@ public class LemonItem extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand interactionHand) {
+        float g = PlanetUtils.getGravityRatio(PlanetUtils.getPlanet(player));
+        player.sendSystemMessage(Component.literal(String.valueOf(g)));
         return super.use(level, player, interactionHand);
     }
 }
