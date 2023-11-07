@@ -10,7 +10,7 @@
         "type": "minecraft:noise",
         "noise": "nch:simple_continent",
         "xz_scale": 1,
-        "y_scale": 1
+        "y_scale": 0
       },
       "min_inclusive": -10,
       "max_exclusive": -1,
@@ -24,7 +24,7 @@
             "type": "minecraft:noise",
             "noise": "nch:simple_continent",
             "xz_scale": 1,
-            "y_scale": 1
+            "y_scale": 0
           }
         }
       },
@@ -34,7 +34,7 @@
           "type": "minecraft:noise",
           "noise": "nch:simple_continent",
           "xz_scale": 1,
-          "y_scale": 1
+          "y_scale": 0
         },
         "min_inclusive": 1,
         "max_exclusive": 10,
@@ -48,7 +48,7 @@
               "type": "minecraft:noise",
               "noise": "nch:simple_continent",
               "xz_scale": 1,
-              "y_scale": 1
+              "y_scale": 0
             }
           }
         },
@@ -56,7 +56,7 @@
           "type": "minecraft:noise",
           "noise": "nch:simple_continent",
           "xz_scale": 1,
-          "y_scale": 1
+          "y_scale": 0
         }
       }
     }
